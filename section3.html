@@ -1,0 +1,640 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>E-tutor</title>
+    <style type="text/tailwindcss">
+      @theme {
+        /* Colors */
+        --color-gray-900: #1d2026;
+        --color-gray-800: #363b47;
+        --color-gray-700: #4e5566;
+        --color-gray-600: #6e7485;
+        --color-gray-500: #8c94a3;
+        --color-gray-400: #a1a5b3;
+        --color-gray-300: #b7bac7;
+        --color-gray-200: #ced1d9;
+        --color-gray-100: #e9eaf0;
+        --color-gray-50: #f5f7fa;
+        --color-white: #ffffff;
+
+        --color-primary-900: #33140b;
+        --color-primary-800: #662916;
+        --color-primary-700: #993d20;
+        --color-primary-600: #cc522b;
+        --color-primary-500: #ff6636;
+        --color-primary-400: #ff855e;
+        --color-primary-300: #ffa386;
+        --color-primary-200: #ffddd1;
+        --color-primary-100: #ffeee8;
+
+        --color-secondary-900: #111033;
+        --color-secondary-800: #222065;
+        --color-secondary-700: #342f98;
+        --color-secondary-600: #453fca;
+        --color-secondary-500: #564ffd;
+        --color-secondary-400: #7872fd;
+        --color-secondary-300: #9a95fe;
+        --color-secondary-200: #cdcbfe;
+        --color-secondary-100: #ebebff;
+
+        --color-sucess-900: #07260a;
+        --color-sucess-800: #0e4c14;
+        --color-sucess-700: #15711f;
+        --color-sucess-600: #1c9729;
+        --color-sucess-500: #23bd33;
+        --color-sucess-400: #4fca5c;
+        --color-sucess-300: #7bd785;
+        --color-sucess-200: #c3e5c6;
+        --color-sucess-100: #e1f7e3;
+
+        --color-warning-900: #331d06;
+        --color-warning-800: #65390c;
+        --color-warning-700: #985613;
+        --color-warning-600: #cc7319;
+        --color-warning-500: #fd8e1f;
+        --color-warning-400: #fda44c;
+        --color-warning-300: #febb79;
+        --color-warning-200: #fed1a5;
+        --color-warning-100: #fff2e5;
+
+        --color-danger-900: #2d0e0e;
+        --color-danger-800: #5b1b1b;
+        --color-danger-700: #882929;
+        --color-danger-600: #b63636;
+        --color-danger-500: #e34444;
+        --color-danger-400: #e96969;
+        --color-danger-300: #ee8f8f;
+        --color-danger-200: #f4c8c8;
+        --color-danger-100: #fff0f0;
+
+        /* font */
+        --font-family: "Inter", sans-serif;
+        /* weight */
+        --font-normal: 400;
+        --font-medium: 500;
+        --font-semibold: 600;
+        /* text size */
+        --text-8xl: 80px;
+        --text-8xl-line-height: 80px;
+        --text-7xl: 72px;
+        --text-7xl-line-height: 74px;
+        --text-6xl: 64px;
+        --text-6xl-line-height: 68px;
+        --text-5xl: 48px;
+        --text-5xl-line-height: 52px;
+        --text-4xl: 40px;
+        --text-4xl-line-height: 48px;
+        --text-3xl: 32px;
+        --text-3xl-line-height: 40px;
+        --text-2xl: 24px;
+        --text-2xl-line-height: 32px;
+        --text-lg: 18px;
+        --text-lg-line-height: 100%;
+        --text-base: 16px;
+        --text-base-line-height: 100%;
+        --text-sm: 14px;
+        --text-sm-line-height: 100%;
+        --text-xs: 12px;
+        --text-xs-line-height: 12px;
+        --text-xxs: 10px;
+        --text-xxs-line-height: 12px;
+      }
+       .btn{
+        @apply px-8 font-semibold tracking-[-0.8%] leading-12;
+      }
+
+      .btn-primary{
+        @apply bg-primary-500 text-white hover:bg-primary-600 hover:drop-shadow-[0_0_20px_rgba(204,82,43,0.5)]
+      }
+
+      .btn-secondary{
+        @apply  bg-primary-100 text-primary-500 hover:bg-primary-200 hover:text-primary-600
+      }
+
+      .btn-gray{
+        @apply bg-gray-800 text-white
+      }
+
+      .btn-tertiary{
+        @apply bg-white text-primary-500 hover:bg-primary-100 text-primary-600
+      }
+
+      .btn-simple{
+        @apply text-primary-500 text-left hover:border-b-2 border-primary-500 px-0
+      }
+
+
+      .container {
+        @apply max-w-[1320px] mx-auto;
+      }
+    </style>
+  </head>
+  <body class="font-family">
+    <section class="text-gray-900">
+      <!--Become an instructor-->
+      <div class="bg-gray-50 h-[671px] pt-20">
+        <div class="container">
+          <div class="grid grid-cols-2 gap-6">
+            <div
+              class="bg-linear-to-r from bg-primary-600 to bg-primary-500 text-white flex items-center justify-between pt-10 pl-10"
+            >
+              <div class="space-y-6 pb-10">
+                <h3 class="text-3xl">Become an instructor</h3>
+                <p class="max-w-[400px]">
+                  Instructors from around the world teach millions of students
+                  on Udemy. We provide the tools and skills to teach what you
+                  love.
+                </p>
+                <button
+                  class="btn btn-tertiary flex items-center gap-3"
+                >
+                  Start teaching
+                  <span><img src="assets/ArrowRight.svg" alt=""></span>
+                </button>
+              </div>
+              <div>
+                <img src="./assets/be_an_instructor.svg" alt="" class="h-full object-cover" />
+              </div>
+            </div>
+
+            <div class="p-10 bg-white space-y-[27px]">
+              <h3 class="tracking-[-1%] font-semibold text-3xl">
+                Your teaching & earning steps
+              </h3>
+              <div class="grid grid-cols-2 gap-y-5">
+                <div class="flex gap-4 flex items-center">
+                  <div
+                    class="h-[52px] w-[52px] rounded-full bg-secondary-100 flex items-center justify-center text-secondary-500 text-2xl font-semibold"
+                  >
+                    1
+                  </div>
+                  <p>Apply to become instructor</p>
+                </div>
+                <div class="flex gap-4 flex items-center">
+                  <div
+                    class="h-[52px] w-[52px] rounded-full bg-danger-100 flex items-center justify-center text-primary-500 text-2xl font-semibold"
+                  >
+                    2
+                  </div>
+                  <p>Build & edit your profile</p>
+                </div>
+                <div class="flex gap-4 flex items-center">
+                  <div
+                    class="h-[52px] w-[52px] rounded-full bg-danger-100 flex items-center justify-center text-danger-500 text-2xl font-semibold"
+                  >
+                    3
+                  </div>
+                  <p>Create your new course</p>
+                </div>
+                <div class="flex gap-4 flex items-center">
+                  <div
+                    class="h-[52px] w-[52px] rounded-full bg-sucess-100 flex items-center justify-center text-sucess-500 text-2xl font-semibold"
+                  >
+                    4
+                  </div>
+                  <p>Start teaching & earning</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--instructor of the month-->
+      <div class="relative h-[384px]">
+        <div
+          class="space-y-10 p-20 pb-[85px] border border-gray-100 bg-white absolute left-50 right-50 top-[-200px]"
+        >
+          <h2 class="text-center text-4xl tracking-[-1%] font-semibold">
+            Top instructor of the month
+          </h2>
+
+          <div class="grid grid-cols-5 gap-[25px] container">
+            <!--Instructor 1-->
+            <div class="border border-gray-100">
+              <img src="assets/devon.svg" alt="" class="w-full" />
+              <div class="text-center py-3 border-b border-gray-100">
+                <p class="font-medium leading-[22px]">Devon Lane</p>
+                <p class="text-gray-500 tracking-[-1%] text-sm leading-[22px]">
+                  Senior Developer
+                </p>
+              </div>
+
+              <div class="flex justify-between items-center px-4">
+                <div class="flex space-x-[5px]">
+                  <img src="assets/Star.svg" alt="" srcset="" />
+                  <p>4.6</p>
+                </div>
+
+                <p class="py-3">
+                  854
+                  <span
+                    class="text-gray-500 tracking-[-1%] text-sm leading-[22px]"
+                    >students</span
+                  >
+                </p>
+              </div>
+            </div>
+            <!--Instructor 2-->
+            <div class="border border-gray-100">
+              <img src="assets/darell.svg" alt="" class="w-full" />
+              <div class="text-center py-3 border-b border-gray-100">
+                <p class="font-medium leading-[22px]">Darrell Steward</p>
+                <p class="text-gray-500 tracking-[-1%] text-sm leading-[22px]">
+                  Digital Product Designer
+                </p>
+              </div>
+
+              <div class="flex justify-between items-center px-4">
+                <div class="flex space-x-[5px]">
+                  <img src="assets/Star.svg" alt="" srcset="" />
+                  <p>4.9</p>
+                </div>
+
+                <p class="py-3">
+                  451,444<span
+                    class="text-gray-500 tracking-[-1%] text-sm leading-[22px]"
+                    >students</span
+                  >
+                </p>
+              </div>
+            </div>
+            <!--Instructor 3-->
+            <div class="border border-gray-100">
+              <img src="assets/jane.svg" alt="" class="w-full" />
+              <div class="text-center py-3 border-b border-gray-100">
+                <p class="font-medium leading-[22px]">Jane Cooper</p>
+                <p class="text-gray-500 tracking-[-1%] text-sm leading-[22px]">
+                  UI/UX Designer
+                </p>
+              </div>
+
+              <div class="flex justify-between items-center px-4">
+                <div class="flex space-x-[5px]">
+                  <img src="assets/Star.svg" alt="" srcset="" />
+                  <p>4.8</p>
+                </div>
+
+                <p class="py-3">
+                  435,671
+                  <span
+                    class="text-gray-500 tracking-[-1%] text-sm leading-[22px]"
+                    >students</span
+                  >
+                </p>
+              </div>
+            </div>
+            <!--Instructor 4-->
+            <div class="border border-gray-100">
+              <img src="assets/albert.svg" alt="" class="w-full" />
+              <div class="text-center py-3 border-b border-gray-100">
+                <p class="font-medium leading-[22px]">Albert Flores</p>
+                <p class="text-gray-500 tracking-[-1%] text-sm leading-[22px]">
+                  Adobe Instructor
+                </p>
+              </div>
+
+              <div class="flex justify-between items-center px-4">
+                <div class="flex space-x-[5px]">
+                  <img src="assets/Star.svg" alt="" srcset="" />
+                  <p>4.7</p>
+                </div>
+
+                <p class="py-3">
+                  511,123
+                  <span
+                    class="text-gray-500 tracking-[-1%] text-sm leading-[22px]"
+                    >students</span
+                  >
+                </p>
+              </div>
+            </div>
+            <!--Instructor 5-->
+            <div class="border border-gray-100">
+              <img src="assets/katheryn.svg" alt="" class="w-full" />
+              <div class="text-center py-3 border-b border-gray-100">
+                <p class="font-medium leading-[22px]">Kathryn Murphy</p>
+                <p class="text-gray-500 tracking-[-1%] text-sm leading-[22px]">
+                  Lead Developer
+                </p>
+              </div>
+
+              <div class="flex justify-between items-center px-4">
+                <div class="flex space-x-[5px]">
+                  <img src="assets/Star.svg" alt="" srcset="" />
+                  <p>4.2</p>
+                </div>
+
+                <p class="py-3">
+                  2711
+                  <span
+                    class="text-gray-500 tracking-[-1%] text-sm leading-[22px]"
+                    >students</span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 justify-center">
+            <p
+            class="text-center text-gray-500 text-sm leading-[22px] tracking-[-1%]">
+            Thousands of students waiting for a instructor. Start teaching &
+            earning now!</p>
+            <button class="btn btn-simple flex items-center gap-2"
+              >Become Instructor <img src="./assets/ArrowRight.svg" alt=""
+            />
+        </button>
+          
+
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <section class="pt-[129px]">
+      <!--Trusted companies-->
+      <div class="container py-20 flex justify-between items-center">
+        <div class="space-y-6 max-w-[424px]">
+          <h2 class="text-gray-900 font-semibold -tracking-[1%] text-3xl">
+            6.3k trusted companies
+          </h2>
+          <p class="text-gray-600 text-sm leading-[22px] max-w-[312px]">
+            Nullam egestas tellus at enim ornare tristique. Class aptent taciti
+            sociosqu ad litora torquent per conubia nostra.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-4 gap-6">
+          <!--company 1-->
+          <div
+            class="bg-white px-[50px] drop-shadow-[0_0_32px_rgba(9,26,68,0.07)]"
+          >
+            <img src="./assets/netflix.svg" alt="netflix logo" />
+          </div>
+          <!--company 2-->
+          <div
+            class="bg-white px-[50px] flex items-center drop-shadow-[0_0_32px_rgba(9,26,68,0.07)]"
+          >
+            <img src="./assets/youtube.svg" alt="youtube logo" />
+          </div>
+          <!--company 3-->
+          <div
+            class="bg-white px-[50px] flex items-center drop-shadow-[0_0_32px_rgba(9,26,68,0.07)]"
+          >
+            <img src="./assets/google.svg" alt="google logo" />
+          </div>
+          <!--company 4-->
+          <div
+            class="bg-white px-[50px] flex items-center drop-shadow-[0_0_32px_rgba(9,26,68,0.07)]"
+          >
+            <img src="./assets/lenovo.svg" alt="lenovo logo" />
+          </div>
+          <!--company 5-->
+          <div
+            class="bg-white px-[50px] flex items-center drop-shadow-[0_0_32px_rgba(9,26,68,0.07)]"
+          >
+            <img src="./assets/slack.svg" alt="slack logo" />
+          </div>
+          <!--company 6-->
+          <div
+            class="bg-white px-[50px] flex items-center drop-shadow-[0_0_32px_rgba(9,26,68,0.07)]"
+          >
+            <img src="./assets/verizon.svg" alt="verizon logo" />
+          </div>
+          <!--company 7-->
+          <div
+            class="bg-white px-[50px] flex items-center drop-shadow-[0_0_32px_rgba(9,26,68,0.07)]"
+          >
+            <img src="./assets/lexmark.svg" alt="lexmark logo" />
+          </div>
+          <!--company 8-->
+          <div
+            class="bg-white px-[50px] flex items-center drop-shadow-[0_0_32px_rgba(9,26,68,0.07)]"
+          >
+            <img src="./assets/microsoft.svg" alt="microsoft logo" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-gray-900 border-b-1 border-gray-500">
+      <div
+        class="container py-25 flex gap-[136px] justify-between items-center"
+      >
+        <div class="max-w-[536px] space-y-8">
+          <h2 class="text-white font-semibold text-4xl tracking-[-1%]">
+            Start learning with 67.1k students around the world.
+          </h2>
+          <div class="space-x-4">
+            <button class="btn btn-primary">Join the Family</button>
+            <button class="btn btn-gray">Browse all Courses</button>
+          </div>
+        </div>
+        <div class="grid grid-cols-3 gap-20">
+          <div class="space-y-3 max-w-[200px]">
+            <p class="text-white text-4xl font-semibold tracking-[-1%]">6.3k</p>
+            <p class="text-gray-300 font-medium leading-[22px]">
+              Online courses
+            </p>
+          </div>
+
+          <div class="space-y-3 max-w-[200px]">
+            <p class="text-white text-4xl font-semibold tracking-[-1%]">26k</p>
+            <p class="text-gray-300 font-medium leading-[22px]">
+              Certified Instructor
+            </p>
+          </div>
+
+          <div class="space-y-3 max-w-[200px]">
+            <p class="text-white text-4xl font-semibold tracking-[-1%]">
+              99.9%
+            </p>
+            <p class="text-gray-300 font-medium leading-[22px]">Sucess Rate</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-gray-900">
+        <div class=" border-b border-gray-500">
+             <div class="container py-20 flex justify-between">
+        <div class="space-y-[26px] max-w-[287px]">
+          <div class="space-y-6">
+            <div class="flex gap-[9.2px] items-center">
+              <img src="./assets/GraduationCap.svg" alt="" />
+              <p
+                class="text-white text-[37px] font-semibold tracking-[-3%] leading-[124%]"
+              >
+                E-tutor
+              </p>
+            </div>
+            <p class="text-sm tracking-[-1%] leading-[22px] text-gray-500">
+              Aliquam rhoncus ligula est, non pulvinar elit convallis nec. Donec
+              mattis odio at.
+            </p>
+          </div>
+
+          <!--Social icons-->
+          <div class="grid grid-cols-5">
+            <div class="w-[46px] h-[46px] bg-[#363B47] flex justify-center items-center hover:bg-primary-500 hover:drop-shadow-[0_0_30px_rgba(204,82,43,0.5)]">
+                <a><img src="./assets/facebook.svg" alt="facebook logo"></a>
+            </div>
+            <div class="w-[46px] h-[46px] bg-[#363B47] flex justify-center items-center hover:bg-primary-500 hover:drop-shadow-[0_0_30px_rgba(204,82,43,0.5)]">
+                <a><img src="./assets/Instragarm.svg" alt="instagram logo"></a>
+            </div>
+            <div class="w-[46px] h-[46px] bg-[#363B47] flex justify-center items-center hover:bg-primary-500 hover:drop-shadow-[0_0_30px_rgba(204,82,43,0.5)]">
+                <a><img src="./assets/Linkedin.svg" alt="Linkedin logo"></a>
+            </div>
+            <div class="w-[46px] h-[46px] bg-[#363B47] flex justify-center items-center hover:bg-primary-500 hover:drop-shadow-[0_0_30px_rgba(204,82,43,0.5)]">
+                <a><img src="./assets/Twitter.svg" alt="twitter logo"></a>
+            </div>
+            <div class="w-[46px] h-[46px] bg-[#363B47] flex justify-center items-center hover:bg-primary-500 hover:drop-shadow-[0_0_30px_rgba(204,82,43,0.5)]">
+                <a href=""><img src="./assets/yticon.svg" alt="youtube logo"></a>
+            </div>
+
+          </div>
+        </div>
+
+        <!--Navigation links-->
+        <div class=" grid grid-cols-4 gap-6">
+            <div class="space-y-6 max-w-[200px]">
+                <h3 class="text-sm uppercase font-medium text-white">Top 4 Category</h3>
+
+                <div>
+                  <a href="#" class="group w-fit py-[6px] text-gray-500 text-sm leading-[22px] tracking-[-1%] hover:text-white hover:border-b-2 border-primary-500 flex items-center gap-3">
+                        Development
+                        <span class="opacity-0 group-hover:opacity-100 transition-opacity ">
+                            <img src="./assets/ArrowRightwhite.svg" >
+                        </span>
+                    </a>
+                   <a href="#" class="group w-fit py-[6px] text-gray-500 text-sm leading-[22px] tracking-[-1%] hover:text-white hover:border-b-2 border-primary-500 flex items-center gap-3">
+                        Finance & Accounting
+                        <span class="opacity-0 group-hover:opacity-100 transition-opacity ">
+                            <img src="./assets/ArrowRightwhite.svg" >
+                        </span>
+                    </a>
+                     <a href="#" class="group w-fit py-[6px] text-gray-500 text-sm leading-[22px] tracking-[-1%] hover:text-white hover:border-b-2 border-primary-500 flex items-center gap-3">
+                        Design
+                        <span class="opacity-0 group-hover:opacity-100 transition-opacity ">
+                            <img src="./assets/ArrowRightwhite.svg" >
+                        </span>
+                    </a>
+                   <a href="#" class="group w-fit py-[6px] text-gray-500 text-sm leading-[22px] tracking-[-1%] hover:text-white hover:border-b-2 border-primary-500 flex items-center gap-3">
+                        Business
+                        <span class="opacity-0 group-hover:opacity-100 transition-opacity ">
+                            <img src="./assets/ArrowRightwhite.svg" >
+                        </span>
+                    </a>
+                </div>
+            </div>
+             <div class="space-y-6">
+                <h3 class="text-sm uppercase font-medium text-white">Quick links</h3>
+
+                <div>
+                  <a href="#" class="group w-fit py-[6px] text-gray-500 text-sm leading-[22px] tracking-[-1%] hover:text-white hover:border-b-2 border-primary-500 flex items-center gap-3">
+                        About
+                        <span class="opacity-0 group-hover:opacity-100 transition-opacity ">
+                            <img src="./assets/ArrowRightwhite.svg" >
+                        </span>
+                    </a>
+                   <a href="#" class="group w-fit py-[6px] text-gray-500 text-sm leading-[22px] tracking-[-1%] hover:text-white hover:border-b-2 border-primary-500 flex items-center gap-3">
+                        Become Instructor
+                        <span class="opacity-0 group-hover:opacity-100 transition-opacity ">
+                            <img src="./assets/ArrowRightwhite.svg" >
+                        </span>
+                    </a>
+                   <a href="#" class="group w-fit py-[6px] text-gray-500 text-sm leading-[22px] tracking-[-1%] hover:text-white hover:border-b-2 border-primary-500 flex items-center gap-3">
+                        Contact
+                        <span class="opacity-0 group-hover:opacity-100 transition-opacity ">
+                            <img src="./assets/ArrowRightwhite.svg" >
+                        </span>
+                    </a>
+                   <a href="#" class="group w-fit py-[6px] text-gray-500 text-sm leading-[22px] tracking-[-1%] hover:text-white hover:border-b-2 border-primary-500 flex items-center gap-3">
+                        Career
+                        <span class="opacity-0 group-hover:opacity-100 transition-opacity ">
+                            <img src="./assets/ArrowRightwhite.svg" >
+                        </span>
+                    </a>
+                </div>
+            </div>
+             <div class="space-y-6">
+                <h3 class="text-sm uppercase font-medium text-white">support</h3>
+
+                <div>
+                  <a href="#" class="group w-fit py-[6px] text-gray-500 text-sm leading-[22px] tracking-[-1%] hover:text-white hover:border-b-2 border-primary-500 flex items-center gap-3">
+                        Help Center
+                        <span class="opacity-0 group-hover:opacity-100 transition-opacity ">
+                            <img src="./assets/ArrowRightwhite.svg" >
+                        </span>
+                    </a>
+                   <a href="#" class="group w-fit py-[6px] text-gray-500 text-sm leading-[22px] tracking-[-1%] hover:text-white hover:border-b-2 border-primary-500 flex items-center gap-3">
+                        FAQs
+                        <span class="opacity-0 group-hover:opacity-100 transition-opacity ">
+                            <img src="./assets/ArrowRightwhite.svg" >
+                        </span>
+                    </a>
+                   <a href="#" class="group w-fit py-[6px] text-gray-500 text-sm leading-[22px] tracking-[-1%] hover:text-white hover:border-b-2 border-primary-500 flex items-center gap-3">
+                        Terms & Conditions
+                        <span class="opacity-0 group-hover:opacity-100 transition-opacity ">
+                            <img src="./assets/ArrowRightwhite.svg" >
+                        </span>
+                    </a>
+                   <a href="#" class="group w-fit py-[6px] text-gray-500 text-sm leading-[22px] tracking-[-1%] hover:text-white hover:border-b-2 border-primary-500 flex items-center gap-3">
+                        Privacy Policy
+                        <span class="opacity-0 group-hover:opacity-100 transition-opacity ">
+                            <img src="./assets/ArrowRightwhite.svg" >
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <div class="space-y-3">
+                <h3 class="text-sm uppercase font-medium text-white">download our app</h3>
+
+                <div class="bg-[#363B47] flex items-center justify-center gap-3 py-3 px-5">
+                    <img src="./assets/apple.svg">
+                    <div>
+                        <p class="text-gray-300 text-xxs">Download now</p>
+                        <p class="text-white leading-[22px] font-medium">App Store</p>
+                    </div>
+                </div>
+
+                 <div class="bg-[#363B47] flex items-center justify-center gap-3 py-3 px-5">
+                    <img src="./assets/googleplay.svg">
+                    <div>
+                        <p class="text-gray-300 text-xxs">Download now</p>
+                        <p class="text-white leading-[22px] font-medium">play Store</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+      </div>
+
+        </div>
+     
+      <div class="container">
+        <!--CopyRights-->
+        <div class="flex justify-between items-center">
+            <p class="text-sm leading-[22px] tracking-[-1%] text-gray-500 py-[37px]">© 2021 - Eduflex. Designed by <span class="text-white">Templatecookie</span>. All rights reserved</p>
+            <select class=" min-w-[200px] text-gray-500 border border-gray-800 px-[18px] py-3 my-[12px]">
+                <option>English</option>
+            </select>
+        </div>
+      </div>
+
+    </footer>
+  </body>
+</html>
