@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>E-tutor</title>
+    <style type="text/tailwindcss">
+      @theme {
+        /* Colors */
+        --color-gray-900: #1d2026;
+        --color-gray-800: #363b47;
+        --color-gray-700: #4e5566;
+        --color-gray-600: #6e7485;
+        --color-gray-500: #8c94a3;
+        --color-gray-400: #a1a5b3;
+        --color-gray-300: #b7bac7;
+        --color-gray-200: #ced1d9;
+        --color-gray-100: #e9eaf0;
+        --color-gray-50: #f5f7fa;
+        --color-white: #ffffff;
+
+        --color-primary-900: #33140b;
+        --color-primary-800: #662916;
+        --color-primary-700: #993d20;
+        --color-primary-600: #cc522b;
+        --color-primary-500: #ff6636;
+        --color-primary-400: #ff855e;
+        --color-primary-300: #ffa386;
+        --color-primary-200: #ffddd1;
+        --color-primary-100: #ffeee8;
+
+        --color-secondary-900: #111033;
+        --color-secondary-800: #222065;
+        --color-secondary-700: #342f98;
+        --color-secondary-600: #453fca;
+        --color-secondary-500: #564ffd;
+        --color-secondary-400: #7872fd;
+        --color-secondary-300: #9a95fe;
+        --color-secondary-200: #cdcbfe;
+        --color-secondary-100: #ebebff;
+
+        --color-sucess-900: #07260a;
+        --color-sucess-800: #0e4c14;
+        --color-sucess-700: #15711f;
+        --color-sucess-600: #1c9729;
+        --color-sucess-500: #23bd33;
+        --color-sucess-400: #4fca5c;
+        --color-sucess-300: #7bd785;
+        --color-sucess-200: #c3e5c6;
+        --color-sucess-100: #e1f7e3;
+
+        --color-warning-900: #331d06;
+        --color-warning-800: #65390c;
+        --color-warning-700: #985613;
+        --color-warning-600: #cc7319;
+        --color-warning-500: #fd8e1f;
+        --color-warning-400: #fda44c;
+        --color-warning-300: #febb79;
+        --color-warning-200: #fed1a5;
+        --color-warning-100: #fff2e5;
+
+        --color-danger-900:#2D0E0E;
+        --color-danger-800:#5B1B1B;
+        --color-danger-700:#882929;
+        --color-danger-600:#B63636;
+        --color-danger-500:#E34444;
+        --color-danger-400:#E96969;
+        --color-danger-300:#EE8F8F;
+        --color-danger-200:#F4C8C8;
+        --color-danger-100:#FFF0F0;
+
+            /* font */
+        --font-family: 'Inter', sans-serif;
+            /* weight */
+        --font-normal: 400;
+        --font-medium: 500;
+        --font-semibold: 600;
+            /* text size */
+        --text-8xl:80px;
+        --text-8xl-line-height:80px;
+        --text-7xl:72px;
+        --text-7xl-line-height:74px;
+        --text-6xl:64px;
+        --text-6xl-line-height:68px;
+        --text-5xl:48px;
+        --text-5xl-line-height:52px;
+        --text-4xl:40px;
+        --text-4xl-line-height:48px;
+        --text-3xl:32px;
+        --text-3xl-line-height:40px;
+        --text-2xl:24px;
+        --text-2xl-line-height:32px;
+        --text-lg:18px;
+        --text-lg-line-height:100%;
+        --text-base:16px;
+        --text-base-line-height:100%;
+        --text-sm:14px;
+        --text-sm-line-height:100%;
+        --text-xs:12px;
+        --text-xs-line-height:12px;
+        --text-xxs:10px;
+        --text-xxs-line-height:12px; 
+      }
+        .btn{
+        @apply px-8 text-base font-semibold tracking-[-0.8%] leading-12;
+      }
+
+      .btn-primary{
+        @apply bg-primary-500 text-white 
+      }
+
+      .btn-secondary{
+        @apply  bg-primary-100
+      }
+
+      .btn-gray{
+        @apply bg-gray-800 text-white
+      }
+
+      .btn-simple{
+        @apply text-primary-500 text-sm
+      }
+
+      .container{@apply max-w-[1320px] mx-auto}
+    </style>
+  </head>
+  <body class="font-[Inter]">
+
+   <section class="bg-gray-50 py-20">
+  
+  <!-- Container -->
+  <div class="max-w-[1320px] mx-auto px-6">
+
+    <h2 class="text-3xl font-semibold text-gray-900 text-center mb-12">
+      Best selling courses
+    </h2>
+
+    <!-- card grid -->
+      <div class="grid grid-cols-5 gap-6">
+      <!-- card1 -->
+        <div class="bg-white shadow-sm flex flex-col gap-3 overflow-hidden">
+        
+        <img src="./assets/design.svg" alt="" class="w-full h-[183px] object-cover ">
+
+        <div class="flex justify-between items-center px-4">
+          <span class="text-xxs font-semibold uppercase
+             bg-primary-100 text-primary-700 px-3 py-1">
+             Design
+          </span>
+          <span class="text-sm font-semibold text-primary-500">
+            $57
+          </span>
+        </div>
+
+        <p class="text-sm font-medium text-gray-900 leading-5 h-[48px] mb-[14px] px-4">
+          Machine Learning A-Z™: Hands-On Python & R In Data...
+        </p>
+
+        <div class="flex justify-between text-xs text-gray-500 pt-3 border-t border-[#E9EAF0]/70 px-4 pb-4">
+          <span>⭐ 5.0</span>
+          <span><span class="text-gray-700">265.7K</span> students</span>
+        </div>
+
+      </div>
+
+        <!-- card2 -->
+  <div class="bg-white  shadow-sm flex flex-col gap-3">
+    <img src="./assets/developments.png" alt="" class="w-full h-[183px] object-cover">
+
+    <div class="flex justify-between items-center px-4">
+      <span class="text-xxs font-medium uppercase bg-secondary-100 text-secondary-700 px-3 py-1">DEVELOPMENT</span>
+      <span class="text-sm font-semibold text-primary-500">$57</span>
+    </div>
+
+    <p class="text-sm font-medium text-gray-900 leading-5 h-[48px] mb-[14px] px-4">
+      The Complete 2021 Web Development Bootcamp
+    </p>
+
+    <div class="flex justify-between text-xs text-gray-500 pt-3 border-t border-[#E9EAF0]/70 px-4 pb-4">
+      <span>⭐ 5.0</span>
+      <span><span class="text-gray-700">265.7K</span> students</span>
+    </div>
+  </div>
+        <!-- card3 -->
+ <div class="bg-white shadow-sm flex flex-col gap-3">
+  <img src="./assets/business.svg" alt="Business" class="w-full h-[183px] object-cover">
+
+  <div class="flex justify-between items-center px-4">
+    <span class="text-xxs font-medium uppercase bg-sucess-100 text-sucess-700 px-3 py-1">BUSINESS</span>
+    <span class="text-sm font-semibold text-primary-500">$57</span>
+  </div>
+
+  <p class="text-sm font-medium text-gray-900 leading-5 h-[48px] mb-[14px] px-4">
+    Learn Python Programming Masterclass
+  </p>
+
+  <div class="flex justify-between text-xs text-gray-500 pt-3 border-t border-[#E9EAF0]/70 px-4 pb-4">
+    <span>⭐ 5.0</span>
+    <span><span class="text-gray-700">265.7K</span> students</span>
+  </div>
+ </div>
+
+        <!-- card4 -->
+  <div class="bg-white shadow-sm flex flex-col gap-3">
+  <img src="./assets/Health & fitness.svg" alt="Marketing" class="w-full h-[183px] object-cover">
+
+  <div class="flex justify-between items-center px-4">
+    <span class="text-xxs font-medium uppercase bg-secondary-100 text-secondary-700 px-3 py-1">MARKETING</span>
+    <span class="text-sm font-semibold text-primary-500">$57</span>
+  </div>
+
+  <p class="text-sm font-medium text-gray-900 leading-5 h-[48px] mb-[14px] px-4">
+    The Complete Digital Marketing Course - 12 Courses in 1
+  </p>
+
+  <div class="flex justify-between text-xs text-gray-500 pt-3 border-t border-[#E9EAF0]/70 px-4 pb-4">
+    <span>⭐ 5.0</span>
+    <span><span class="text-gray-700">265.7K</span> students</span>
+  </div>
+</div>
+
+        <!-- card5 -->
+        <div class="bg-white shadow-sm flex flex-col gap-3">
+  <img src="./assets/it & software.svg" alt="IT & Software" class="w-full h-[183px] object-cover">
+
+  <div class="flex justify-between items-center px-4">
+    <span class="text-xxs font-medium uppercase bg-danger-100 text-danger-700 px-3 py-1">IT & SOFTWARE</span>
+    <span class="text-sm font-semibold text-primary-500">$57</span>
+  </div>
+
+  <p class="text-sm font-medium text-gray-900 leading-5 h-[48px] mb-[14px] px-4">
+    Reiki Level I, II and Master/Teacher Program
+  </p>
+
+  <div class="flex justify-between text-xs text-gray-500 pt-3 border-t border-[#E9EAF0]/70 px-4 pb-4">
+    <span>⭐ 5.0</span>
+    <span><span class="text-gray-700">265.7K</span> students</span>
+  </div>
+</div>
+
+
+<!-- card6 -->
+ <div class="bg-white shadow-sm flex flex-col gap-3">
+  <img src="./assets/music.svg" alt="Music" class="w-full h-[183px] object-cover">
+
+  <div class="flex justify-between items-center px-4">
+    <span class="text-xxs font-medium uppercase bg-warning-100 text-warning-800 px-3 py-1">MUSIC</span>
+    <span class="text-sm font-semibold text-primary-500">$57</span>
+  </div>
+
+  <p class="text-sm font-medium text-gray-900 leading-5 h-[48px] mb-[14px] px-4">
+    The Complete Foundation Stock Trading Course
+  </p>
+
+  <div class="flex justify-between text-xs text-gray-500 pt-3 border-t border-[#E9EAF0]/70 px-4 pb-4">
+    <span>⭐ 5.0</span>
+    <span><span class="text-gray-700">265.7K</span> students</span>
+  </div>
+</div>
+
+        <!-- card7 -->
+ <div class="bg-white shadow-sm flex flex-col gap-3">
+  <img src="./assets/marketing.svg" alt="Marketing" class="w-full h-[183px] object-cover">
+
+  <div class="flex justify-between items-center px-4">
+    <span class="text-xxs font-medium uppercase bg-secondary-100 text-secondary-700 px-3 py-1">MARKETING</span>
+    <span class="text-sm font-semibold text-primary-500">$57</span>
+  </div>
+
+  <p class="text-sm font-medium text-gray-900 leading-5 h-[48px] mb-[14px] px-4">
+    Beginner to Pro in Excel: Financial Modeling and Valuati...
+  </p>
+
+  <div class="flex justify-between text-xs text-gray-500 pt-3 border-t border-[#E9EAF0]/70 px-4 pb-4">
+    <span>⭐ 5.0</span>
+    <span><span class="text-gray-700">265.7K</span> students</span>
+  </div>
+ </div>
+
+        <!-- card8 -->
+  <div class="bg-white shadow-sm flex flex-col gap-3">
+  <img src="./assets/Health.png" alt="Health & Fitness" class="w-full h-[183px] object-cover">
+
+  <div class="flex justify-between items-center px-4">
+    <span class="text-xxs font-medium uppercase bg-sucess-100 text-sucess-700 px-3 py-1">
+      HEALTH & FITNESS
+    </span>
+    <span class="text-sm font-semibold text-primary-500">
+      $57
+    </span>
+  </div>
+
+  <p class="text-sm font-medium text-gray-900 leading-5 h-[48px] mb-[14px] px-4">
+    The Python Mega Course: Build 10 Real World Applications
+  </p>
+
+  <div class="flex justify-between text-xs text-gray-500 pt-3 border-t border-[#E9EAF0]/70 px-4 pb-4">
+    <span>⭐ 5.0</span>
+    <span><span class="text-gray-700">265.7K</span> students</span>
+  </div>
+</div>
+
+        <!-- card9 -->
+ <div class="bg-white shadow-sm flex flex-col gap-3">
+  <img src="./assets/design-2.png" alt="Design" class="w-full h-[183px] object-cover">
+
+  <div class="flex justify-between items-center px-4">
+    <span class="text-xxs font-semibold uppercase
+             bg-primary-100 text-primary-700 px-3 py-1">
+             Design
+          </span>
+    <span class="text-sm font-semibold text-primary-500">
+      $57
+    </span>
+  </div>
+
+  <p class="text-sm font-medium text-gray-900 leading-5 h-[48px] mb-[14px] px-4">
+    Copywriting - Become a Freelance Copywriter, your ow...
+  </p>
+
+  <div class="flex justify-between text-xs text-gray-500 pt-3 border-t border-[#E9EAF0]/70 px-4 pb-4">
+    <span>⭐ 5.0</span>
+    <span><span class="text-gray-700">265.7K</span> students</span>
+  </div>
+ </div>
+
+        <!-- card10 -->
+  <div class="bg-white shadow-sm flex flex-col gap-3">
+ <img src="./assets/lifestyle.svg" alt="Lifestyle" class="w-full h-[183px] object-cover">
+
+  <div class="flex justify-between items-center px-4">
+    <span class="text-xxs font-medium uppercase bg-warning-100 text-warning-800 px-3 py-1">
+      LIFESTYLE
+    </span>
+    <span class="text-sm font-semibold text-primary-500">
+      $57
+    </span>
+  </div>
+
+  <p class="text-sm font-medium text-gray-900 leading-5 h-[48px] mb-[14px] px-4">
+    Google Analytics Certification - Learn How To Pass The Exam
+  </p>
+
+  <div class="flex justify-between text-xs text-gray-500 pt-3 border-t border-[#E9EAF0]/70 px-4 pb-4">
+    <span>⭐ 5.0</span>
+    <span><span class="text-gray-700">265.7K</span> students</span>
+  </div>
+ </div>
+ </div>
+
+    </div>
+   </section>
+
+
+
+   <section class="max-w-[1320px] mx-auto px-6">
+    <h2 class="text-3xl font-semibold text-gray-900 text-center mb-12 mt-20">
+     Recently added courses
+    </h2>
+
+    <!-- card grid -->
+    <div class="grid grid-cols-4 gap-6">
+
+     <div class="bg-white rounded-md shadow-sm flex flex-col gap-3">
+  <img src="./assets/Course Images(12).svg" alt="DESIGN" class="w-full h-[183px] object-cover">
+
+  <div class="flex justify-between items-center px-4">
+    <span class="text-xxs font-medium uppercase bg-primary-100 text-primary-700 px-3 py-1">
+      DESIGN
+    </span>
+    <span class="text-sm font-semibold text-primary-500">
+      $57
+    </span>
+  </div>
+
+  <p class="text-sm font-medium text-gray-900 leading-5 h-[48px] mb-[14px] px-4">
+    The Python Mega Course: Build 10 Real World Applications
+  </p>
+
+  <div class="flex justify-between text-xs text-gray-500 pt-3 border-t border-[#E9EAF0]/70 px-4 pb-4">
+    <span>⭐ 5.0</span>
+    <span><span class="text-gray-700">265.7K</span> students</span>
+  </div>
+ </div>
+
+  <div class="bg-white rounded-md shadow-sm flex flex-col gap-3">
+  <img src="./assets/it & software.svg" alt="IT & Software" class="w-full h-[183px] object-cover">
+
+  <div class="flex justify-between items-center px-4">
+    <span class="text-xxs font-medium uppercase bg-danger-100 text-danger-700 px-3 py-1">IT & SOFTWARE</span>
+    <span class="text-sm font-semibold text-primary-500">$57</span>
+  </div>
+
+  <p class="text-sm font-medium text-gray-900 leading-5 h-[48px] mb-[14px] px-4">
+    Facebook Ads & Facebook Marketing MASTERY 2021 Cours...
+  </p>
+
+  <div class="flex justify-between text-xs text-gray-500 pt-3 border-t border-[#E9EAF0]/70 px-4 pb-4">
+    <span>⭐ 5.0</span>
+    <span><span class="text-gray-700">265.7K</span> students</span>
+  </div>
+</div>
+
+<div class="bg-white rounded-md shadow-sm flex flex-col gap-3">
+    <img src="./assets/devlopment2.png" alt="" class="w-full h-[183px] object-cover">
+
+    <div class="flex justify-between items-center px-4">
+      <span class="text-xxs font-medium uppercase bg-secondary-100 text-secondary-700 px-3 py-1">DEVELOPMENT</span>
+      <span class="text-sm font-semibold text-primary-500">$57</span>
+    </div>
+
+    <p class="text-sm font-medium text-gray-900 leading-5 h-[48px] mb-[14px] px-4">
+      2021 Complete Python Bootcamp From Zero to Hero in Python
+    </p>
+
+    <div class="flex justify-between text-xs text-gray-500 pt-3 border-t border-[#E9EAF0]/70 px-4 pb-4">
+      <span>⭐ 5.0</span>
+      <span><span class="text-gray-700">265.7K</span> students</span>
+    </div>
+  </div>
+
+  <div class="bg-white rounded-md shadow-sm flex flex-col gap-3">
+  <img src="./assets/Course Images(14).svg" alt="Marketing" class="w-full h-[183px] object-cover">
+
+  <div class="flex justify-between items-center px-4">
+    <span class="text-xxs font-medium uppercase bg-secondary-100 text-secondary-700 px-3 py-1">MARKETING</span>
+    <span class="text-sm font-semibold text-primary-500">$57</span>
+  </div>
+
+  <p class="text-sm font-medium text-gray-900 leading-5 h-[48px] mb-[14px] px-4">
+    How to get Diamond in soloQ | League of Legends | Season 11
+  </p>
+
+  <div class="flex justify-between text-xs text-gray-500 pt-3 border-t border-[#E9EAF0]/70 px-4 pb-4">
+    <span>⭐ 5.0</span>
+    <span><span class="text-gray-700">265.7K</span> students</span>
+  </div>
+ </div>
+
+     </div>
+    
+   </section>
+  </body>
+</html>
