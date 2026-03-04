@@ -109,27 +109,32 @@
         --text-xxs-line-height:12px; 
       }
         .btn{
-        @apply py-3 px-8 text-lg font-semibold tracking-[-0.8%] leading-12;
+        @apply px-8 font-semibold tracking-[-0.8%] leading-12;
       }
 
       .btn-primary{
-        @apply bg-primary-500 text-white 
+        @apply bg-primary-500 text-white hover:bg-primary-600 hover:drop-shadow-[0_0_20px_rgba(204,82,43,0.5)]
       }
 
       .btn-secondary{
-        @apply  bg-primary-100
+        @apply  bg-primary-100 text-primary-500 hover:bg-primary-200 hover:text-primary-600
       }
 
       .btn-gray{
         @apply bg-gray-800 text-white
       }
 
-      .btn-simple{
-        @apply text-primary-500 text-sm
+      .btn-tertiary{
+        @apply bg-white text-primary-500 hover:bg-primary-100 text-primary-600
       }
-      
+
+      .btn-simple{
+        @apply text-primary-500 text-left hover:border-b-2 border-primary-500 px-0
+      }
+
       .container{@apply max-w-[1320px] mx-auto}
     </style>
   </head>
-  <body></body>
+  <body>
+  </body>
 </html>
