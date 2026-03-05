@@ -108,27 +108,34 @@
         --text-xxs:10px;
         --text-xxs-line-height:12px; 
       }
-        .btn{
-        @apply px-8 text-base font-semibold tracking-[-0.8%] leading-12;
+         .btn{
+        @apply px-8 font-semibold tracking-[-0.8%] leading-12;
       }
 
       .btn-primary{
-        @apply bg-primary-500 text-white 
+        @apply bg-primary-500 text-white hover:bg-primary-600 hover:drop-shadow-[0_0_20px_rgba(204,82,43,0.5)]
       }
 
       .btn-secondary{
-        @apply  bg-primary-100
+        @apply  bg-primary-100 text-primary-500 hover:bg-primary-200 hover:text-primary-600
       }
 
       .btn-gray{
         @apply bg-gray-800 text-white
       }
 
-      .btn-simple{
-        @apply text-primary-500 text-sm
+      .btn-tertiary{
+        @apply bg-white text-primary-500 hover:bg-primary-100 text-primary-600
       }
 
-      .container{@apply max-w-[1320px] mx-auto}
+      .btn-simple{
+        @apply text-primary-500 text-left hover:border-b-2 border-primary-500 px-0
+      }
+
+
+      .container {
+        @apply max-w-[1320px] mx-auto;
+      }
     </style>
   </head>
   <body class="font-[Inter]">
@@ -314,7 +321,7 @@
   <div class="flex justify-between items-center px-4">
     <span class="text-xxs font-semibold uppercase
              bg-primary-100 text-primary-700 px-3 py-1">
-             Design
+             DESIGN
           </span>
     <span class="text-sm font-semibold text-primary-500">
       $57
@@ -359,6 +366,284 @@
    </section>
 
 
+  <section class="bg-gray-50 py-20">
+    <div class="max-w-[1320px] mx-auto px-6">
+
+    <div class="flex justify-between items-end mb-12">
+      
+      <h2 class="text-3xl font-semibold text-gray-900">
+        Recently added courses
+      </h2>
+
+      <p class="text-gray-600 max-w-[520px] text-sm leading-[22px]">
+        Vestibulum sed dolor sed diam mollis maximus vel nec dolor.
+        Donec varius purus et eleifend porta.
+      </p>
+
+    </div>
+
+     <div class="grid grid-cols-2 gap-x-6 gap-y-[26px]">
+
+   <div class="bg-white shadow-sm overflow-hidden flex hover:shadow-md transition">
+
+  <img src="./assets/Health & fitness.svg"
+       class="w-[220px] h-full object-cover">
+
+  <div class="flex flex-col justify-between p-6 flex-1">
+
+    <div>
+
+      <div class="flex justify-between items-center mb-2">
+        <span class="text-[11px] font-semibold uppercase bg-sucess-100 text-sucess-700 px-3 py-1">
+          HEALTH & FITNESS
+        </span>
+
+        <div class="text-right">
+          <span class="text-sm font-semibold text-gray-900">$14.00</span>
+          <span class="text-xs text-gray-400 line-through ml-2">$26.00</span>
+        </div>
+      </div>
+
+      <p class="text-sm font-medium text-gray-900 leading-5 mb-3">
+        Investing In Stocks The Complete Course! (13 Hours)
+      </p>
+
+     <div class="flex items-center justify-between text-xs mb-3">
+
+  <div class="flex items-center gap-2 text-gray-600">
+    <img src="./assets/Kevin.png" class="w-5 h-5 rounded-full">
+    <span>Kevin Gilbert</span>
+  </div>
+
+  <div class="flex items-center gap-1 text-gray-500">
+    <span class="text-yellow-500">⭐</span>
+    <span class="text-gray-900 font-medium">5.0</span>
+    <span>(357,914)</span>
+  </div>
+
+</div>
+
+    </div>
+
+    <div class="flex items-center gap-6 text-xs text-gray-600 pt-4 border-t border-[#E9EAF0]">
+
+      <div class="flex items-center gap-2">
+        <img src="./assets/User (1).png" class="w-4 h-4">
+        <span>265.7K students</span>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <img src="./assets/bar-chart.png" class="w-4 h-4">
+        <span>Beginner</span>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <img src="./assets/Clock.png" class="w-4 h-4">
+        <span>6 hour</span>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- card2 -->
+
+<div class="bg-white shadow-sm overflow-hidden flex hover:shadow-md transition">
+
+  <img src="./assets/it & software.svg"
+       class="w-[220px] h-full object-cover">
+
+  <div class="flex flex-col justify-between p-6 flex-1">
+
+    <div>
+
+      <div class="flex justify-between items-center mb-2">
+        <span class="text-[11px] font-semibold uppercase bg-primary-100 text-primary-700 px-3 py-1">
+          PERSONAL DEVELOPMENT
+        </span>
+
+        <div class="text-right">
+          <span class="text-sm font-semibold text-gray-900">$14.00</span>
+          <span class="text-xs text-gray-400 line-through ml-2">$26.00</span>
+        </div>
+      </div>
+      <p class="text-sm font-medium text-gray-900 leading-5 mb-3">
+        Google Analytics Certification - Learn How To...
+      </p>
+
+     <div class="flex items-center justify-between text-xs mb-3">
+
+  <div class="flex items-center gap-2 text-gray-600">
+    <img src="./assets/Kevin.png" class="w-5 h-5 rounded-full">
+    <span>Kevin Gilbert</span>
+  </div>
+
+  <div class="flex items-center gap-1 text-gray-500">
+    <span class="text-yellow-500">⭐</span>
+    <span class="text-gray-900 font-medium">5.0</span>
+    <span>(357,914)</span>
+  </div>
+
+</div>
+
+    </div>
+
+    <div class="flex items-center gap-6 text-xs text-gray-600 pt-4 border-t border-[#E9EAF0]">
+
+      <div class="flex items-center gap-2">
+        <img src="./assets/User (1).png" class="w-4 h-4">
+        <span>265.7K students</span>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <img src="./assets/bar-chart.png" class="w-4 h-4">
+        <span>Beginner</span>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <img src="./assets/Clock.png" class="w-4 h-4">
+        <span>6 hour</span>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- card3 -->
+
+<div class="bg-white shadow-sm overflow-hidden flex hover:shadow-md transition">
+
+  <img src="./assets/design-2.png"
+       class="w-[220px] h-full object-cover">
+
+  <div class="flex flex-col justify-between p-6 flex-1">
+
+    <div>
+
+      <div class="flex justify-between items-center mb-2">
+        <span class="text-[11px] font-semibold uppercase bg-gray-50 text-gray-900 px-3 py-1">
+         PRODUCTIVITY
+        </span>
+
+        <div class="text-right">
+          <span class="text-sm font-semibold text-gray-900">$14.00</span>
+          <span class="text-xs text-gray-400 line-through ml-2">$26.00</span>
+        </div>
+      </div>
+
+      <p class="text-sm font-medium text-primary-500 leading-5 mb-3">
+        Adobe XD for Web Design: Essential Principles
+      </p>
+
+     <div class="flex items-center justify-between text-xs mb-3">
+
+  <div class="flex items-center gap-2 text-gray-600">
+    <img src="./assets/Kevin.png" class="w-5 h-5 rounded-full">
+    <span>Kevin Gilbert</span>
+  </div>
+
+  <div class="flex items-center gap-1 text-gray-500">
+    <span class="text-yellow-500">⭐</span>
+    <span class="text-gray-900 font-medium">5.0</span>
+    <span>(357,914)</span>
+  </div>
+
+</div>
+
+    </div>
+
+    <div class="flex items-center gap-6 text-xs text-gray-600 pt-4 border-t border-[#E9EAF0]">
+
+      <div class="flex items-center gap-2">
+        <img src="./assets/User (1).png" class="w-4 h-4">
+        <span>265.7K students</span>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <img src="./assets/bar-chart.png" class="w-4 h-4">
+        <span>Beginner</span>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <img src="./assets/Clock.png" class="w-4 h-4">
+        <span>6 hour</span>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- card4 -->
+
+<!-- card4 -->
+
+<div class="bg-white shadow-sm overflow-hidden flex hover:shadow-md transition">
+
+  <img src="./assets/marketing.svg"
+       class="w-[220px] h-full object-cover">
+
+  <div class="flex flex-col justify-between p-6 flex-1">
+
+    <div>
+
+      <div class="flex justify-between items-center mb-2">
+        <span class="text-[11px] font-semibold uppercase bg-secondary-100 text-secondary-700 px-3 py-1">
+          MUSIC
+        </span>
+
+        <div class="text-right">
+          <span class="text-sm font-semibold text-gray-900">$14.00</span>
+          <span class="text-xs text-gray-400 line-through ml-2">$26.00</span>
+        </div>
+      </div>
+
+      <p class="text-sm font-medium text-gray-900 leading-5 mb-3">
+        The Python Mega Course: Build 10 Real World ...
+      </p>
+
+      <div class="flex items-center justify-between text-xs mb-3">
+        <div class="flex items-center gap-2 text-gray-600">
+          <img src="./assets/Kevin.png" class="w-5 h-5 rounded-full">
+          <span>Kevin Gilbert</span>
+        </div>
+
+        <div class="flex items-center gap-1 text-gray-500">
+          <span class="text-yellow-500">⭐</span>
+          <span class="text-gray-900 font-medium">5.0</span>
+          <span>(357,914)</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="flex items-center gap-6 text-xs text-gray-600 pt-4 border-t border-[#E9EAF0]">
+      <div class="flex items-center gap-2">
+        <img src="./assets/User (1).png" class="w-4 h-4">
+        <span>265.7K students</span>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <img src="./assets/bar-chart.png" class="w-4 h-4">
+        <span>Beginner</span>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <img src="./assets/Clock.png" class="w-4 h-4">
+        <span>6 hour</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</div>
+
+
+</section>
+
 
    <section class="max-w-[1320px] mx-auto px-6">
     <h2 class="text-3xl font-semibold text-gray-900 text-center mb-12 mt-20">
@@ -366,7 +651,7 @@
     </h2>
 
     <!-- card grid -->
-    <div class="grid grid-cols-4 gap-6">
+    <div class="grid grid-cols-4 gap-6 mb-10">
 
      <div class="bg-white rounded-md shadow-sm flex flex-col gap-3">
   <img src="./assets/Course Images(12).svg" alt="DESIGN" class="w-full h-[183px] object-cover">
@@ -445,6 +730,14 @@
  </div>
 
      </div>
+
+     <div class="flex justify-center mt-12 mb-20">
+  <button class="bg-primary-100 text-primary-500 px-6
+    tracking-[-0.8%] leading-[48px] text-base 
+    font-semibold py-2 hover:bg-primary-200 transition">
+    Browse All Courses ->
+  </button>
+</div>
     
    </section>
   </body>
