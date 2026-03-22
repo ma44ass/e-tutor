@@ -131,6 +131,20 @@
       .container {
         @apply max-w-[1320px] mx-auto px-6;
       }
+
+      .masked{
+      -webkit-mask-image: url('');
+      mask-image: url('');
+
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+
+      -webkit-mask-size: cover;
+      mask-size: cover;
+
+      -webkit-mask-position: center;
+      mask-position: center;
+}
     </style>
   </head>
 </html>
@@ -141,7 +155,7 @@
     >
       <div class="flex items-center font-normal space-x-[24px]">
         <a
-          href=""
+          href="./home_final.html"
           class="px-[12px] py-[16px] transition-all hover:text-white hover:shadow-[inset_0px_2px_0px_0px_#ff6636]"
           style="box-shadow: 0px 2px 0px 0px #ff6636 inset"
         >
@@ -149,7 +163,7 @@
         </a>
 
         <a
-          href=""
+          href="./courses.html"
           class="px-[12px] py-[16px] transition-all hover:text-white hover:shadow-[inset_0px_2px_0px_0px_#ff6636]"
         >
           Courses
@@ -161,7 +175,7 @@
           About
         </a>
         <a
-          href=""
+          href="./contact.html"
           class="px-[12px] py-[16px] transition-all hover:text-white hover:shadow-[inset_0px_2px_0px_0px_#ff6636]"
         >
           Contact
@@ -266,6 +280,366 @@
     </div>
   </header>
 
+ <!-- About -->
+<section class="bg-[#F5F7FA] py-[40px]">
+  <div class="container text-center">
+    <h1 class="text-[20px] font-medium text-gray-900 mb-[6px]">About</h1>
+
+    <p class="text-sm text-gray-500">
+      <a href="copy_final.html" class="hover:border-b-2 border-primary-500"
+      >Home</a
+      >
+      <span class="mx-1">/</span>
+      <a href="about.html" class="hover:border-b-2 border-primary-500">About</a>
+    </p>
+
+  </div>
+</section>
+
+
+  <!-- About US section -->
+  <section class="bg-white py-[80px]">
+    <div class="container flex items-center justify-between">
+      <div class="px-[70 px]">
+        <span
+          class="text-8xl leading-[80px] tracking-[-2%] font-semibold text-gray-100 block mb-[16px] mr-[119px]"
+        >
+          2007-2021
+        </span>
+
+        <h2
+          class="text-5xl leading-[52px] tracking-[-2%] font-semibold text-gray-900 mb-[32px]"
+        >
+          We share knowledge <br />
+          with the world
+        </h2>
+
+        <p class="text-gray-600 text-[20px] leading-[32px]">
+          Interdum et malesuada fames ac ante ipsum primis in <br />
+          faucibus. Praesent fermentum quam mauris. Fusce <br />
+          tempor et augue a aliquet. Donec non ipsum non risus <br />
+          egestas tincidunt at vitae nulla.
+        </p>
+      </div>
+
+      <!-- Right image -->
+      <div>
+        <svg width="0" height="0" class="absolute">
+          <defs>
+            <clipPath id="frameMask" clipPathUnits="objectBoundingBox">
+              <path d="M0,0 H0.666 V1 H0 Z M0.702,0 H1 V1 H0.702 Z" />
+            </clipPath>
+          </defs>
+        </svg>
+
+        <div class="relative w-[672px] aspect-[672/500]">
+          <img
+            src="assets/confidentBusinessman.jpg"
+            alt="confident Businessman standing"
+            class="w-full h-full object-cover [clip-path:url(#frameMask)]"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="pb-20  border-t border-gray-100 pt-[80px]">
+      <!--Trusted companies-->
+      <div class="container flex justify-between items-center">
+        <div class="space-y-6 max-w-[424px]">
+          <h2 class="text-gray-900 font-semibold -tracking-[1%] text-3xl">
+            We Just keep growing <br>
+            6.3k trusted companies
+          </h2>
+          <p class="text-gray-600 text-sm leading-[22px] max-w-[312px]">
+            Nullam egestas tellus at enim ornare tristique. Class aptent taciti
+            sociosqu ad litora torquent 
+          </p>
+        </div>
+
+        <div class="grid grid-cols-4 gap-6">
+          <!--company 1-->
+          <div
+            class="bg-white px-[50px] drop-shadow-[0_0_32px_rgba(9,26,68,0.07)]"
+          >
+            <img src="./assets/netflix.svg" alt="netflix logo" />
+          </div>
+          <!--company 2-->
+          <div
+            class="bg-white px-[50px] flex items-center drop-shadow-[0_0_32px_rgba(9,26,68,0.07)]"
+          >
+            <img src="./assets/youtube.svg" alt="youtube logo" />
+          </div>
+          <!--company 3-->
+          <div
+            class="bg-white px-[50px] flex items-center drop-shadow-[0_0_32px_rgba(9,26,68,0.07)]"
+          >
+            <img src="./assets/google.svg" alt="google logo" />
+          </div>
+          <!--company 4-->
+          <div
+            class="bg-white px-[50px] flex items-center drop-shadow-[0_0_32px_rgba(9,26,68,0.07)]"
+          >
+            <img src="./assets/lenovo.svg" alt="lenovo logo" />
+          </div>
+          <!--company 5-->
+          <div
+            class="bg-white px-[50px] flex items-center drop-shadow-[0_0_32px_rgba(9,26,68,0.07)]"
+          >
+            <img src="./assets/slack.svg" alt="slack logo" />
+          </div>
+          <!--company 6-->
+          <div
+            class="bg-white px-[50px] flex items-center drop-shadow-[0_0_32px_rgba(9,26,68,0.07)]"
+          >
+            <img src="./assets/verizon.svg" alt="verizon logo" />
+          </div>
+          <!--company 7-->
+          <div
+            class="bg-white px-[50px] flex items-center drop-shadow-[0_0_32px_rgba(9,26,68,0.07)]"
+          >
+            <img src="./assets/lexmark.svg" alt="lexmark logo" />
+          </div>
+          <!--company 8-->
+          <div
+            class="bg-white px-[50px] flex items-center drop-shadow-[0_0_32px_rgba(9,26,68,0.07)]"
+          >
+            <img src="./assets/microsoft.svg" alt="microsoft logo" />
+          </div>
+        </div>
+      </div>
+
+    
+    <div class="container flex items-center justify-between gap-6 text-xs text-gray-700 pt-4 my-[80px]">
+
+      <div class="flex items-center gap-4">
+        <img src="./assets/AboutUsers.png" class="w-10 h-10">
+        <div class="flex flex-col items-start gap-2">
+          <p class="font-semibold text-3xl leading-[40px] tracking-[-1%] ">67.1K</p>
+          <span class="font-medium pr-15 text-sm">Students</span>
+          </div>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <img src="./assets/AboutNotebook (1).png" class="w-10 h-10">
+        <div class="flex flex-col items-start gap-2">
+          <p class="font-semibold text-3xl leading-[40px] tracking-[-1%] ">26K</p>
+          <span class="font-medium pr-15 text-sm">Certified Instructor</span>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <img src="./assets/AboutGlobeHemisphere.png" class="w-10 h-10">
+        <div class="flex flex-col items-start gap-2">
+          <p class="font-semibold text-3xl leading-[40px] tracking-[-1%] ">72</p>
+          <span class="font-medium pr-15 text-sm">Country language</span>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <img src="./assets/AboutCircleWavyCheck.png" class="w-10 h-10">
+        <div class="flex flex-col items-start gap-2">
+          <p class="font-semibold text-3xl leading-[40px] tracking-[-1%] ">99.9%</p>
+          <span class="font-medium pr-15 text-sm">Success Rate</span>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <img src="./assets/AboutStack.png" class="w-10 h-10">
+        <div class="flex flex-col items-start gap-2">
+          <p class="font-semibold text-3xl leading-[40px] tracking-[-1%] ">57</p>
+          <span class="font-medium pr-15 text-sm">Trusted Companies</span>
+        </div>
+      </div>
+
+    </div>
+
+    </section>
+
+ 
+    <!-- Our mission section -->
+    <section class="bg-[#F4E4DD] ">
+  <div class="container flex items-center justify-between ">
+
+    <img src="./assets/Abouttwo-business-partners.png"
+         class="w-[648px] object-contain ">
+
+    <div>
+      <p class="text-xs font-semibold text-primary-500 uppercase mb-3">
+        OUR ONE BILLION MISSION
+      </p>
+
+      <h2 class="text-[36px] font-semibold leading-[44px] text-gray-900 mb-4">
+        Our one billion mission <br>sounds bold, We agree.
+      </h2>
+
+      <p class="text-sm text-gray-500 leading-6">
+        “We cannot solve our problems with the same thinking we used when <br>
+        we created them.” —Albert Einstein. Institutions are slow to change.<br>
+        Committees are where good ideas and innovative thinking go to die.<br>
+        Choose agility over dogma. Embrace and drive change. We need to <br>wipe
+        the slate clean and begin with bold, radical thinking.
+      </p>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Gallery section -->
+<section class="bg-[#F5F7FA] py-[80px]">
+  <div class="container grid grid-cols-2 gap-16 items-center">
+
+    <div class="">
+      <p class="text-base text-primary-500 font-medium uppercase mb-3">
+        OUR GALLERY
+      </p>
+
+      <h2 class="text-[32px] font-semibold text-gray-900 mb-4">
+        We've been here <br> almost 17 years
+      </h2>
+
+      <p class="text-sm text-gray-700 leading-6 mb-6 max-w-[360px]">
+        Fusce lobortis leo augue, sit amet tristique nisi commodo in. 
+        Aliquam ac libero quis tellus venenatis imperdiet. Sed sed nunc
+        libero. Curabitur in urna ligula.  torquent per conubia nostra.
+      </p>
+
+      <button class="bg-primary-500 text-white px-6 py-3 text-sm font-semibold flex items-center gap-2 hover:bg-primary-600 transition">
+        Join Our Team →
+      </button>
+    </div>
+
+    <!-- gallery -->
+   <div class="grid grid-cols-4 grid-rows-3 gap-6">
+        <img
+          src="./assets/About-ModernOffice.png"
+          class="w-full h-full object-cover"
+        />
+
+        <img
+          src="./assets/About-Covid-workers.png"
+          class="col-span-2 row-span-2 w-full h-full object-cover"
+        />
+
+        <img
+          src="./assets/About-VideocallWork.png"
+          class="w-full h-full object-cover"
+        />
+
+        <img
+          src="./assets/About-FinancialGraphs.png"
+          class="row-span-2 w-full h-full object-cover"
+        />
+
+        <img
+          src="./assets/About-BusinessMeeting.png"
+          class="col-span-2 w-full h-full object-cover"
+        />
+
+        <img
+          src="./assets/About-OfficeWorkingLaptop.png"
+          class="w-full h-full object-cover"
+        />
+
+        <img
+          src="./assets/About-LessonsOnline.png"
+          class="w-full h-full object-cover"
+        />
+      </div>
+ </div>
+
+
+
+<section class="bg-white py-[80px]">
+  <div class="container grid grid-cols-3 gap-6 text-center">
+
+    <!-- card 1 -->
+    <div>
+      <div class="bg-gray-50 p-6 relative ">
+
+        <img src="./assets/About-double_quotes-UP.png" class="w-12 mb-2">
+
+        <p class="text-lg text-gray-900 leading-6 tracking-[-1.5%]">
+          Eduguard fit us like a glove. Their team curates fresh,
+          up-to-date courses from their marketplace and makes them
+          available to customers.
+        </p>
+
+        <img src="./assets/About-double_quotes_DOWN.png" class="w-12 ml-auto mt-2">
+
+      </div>
+
+      <div class="w-6 h-4 bg-gray-50 rotate-45 mx-auto -mt-3"></div>
+
+      <div class="mt-6">
+        <p class="text-base font-medium text-gray-900 leading-[22px]">Sundar Pichai</p>
+        <p class="text-sm font-normal text-gray-600 tracking-[-1%]">
+          Chief Chairman of <span class="text-blue-500 font-medium leading-[20px]">Google</span>
+        </p>
+      </div>
+    </div>
+
+
+    <!-- card 2 -->
+    <div>
+      <div class="bg-gray-50 p-6 relative ">
+
+        <img src="./assets/About-double_quotes-UP.png" class="w-12 mb-2">
+
+        <p class="text-lg text-gray-900 leading-6 tracking-[-1.5%]">
+          Eduguard responds to the needs of the business in an agile
+          and global manner. It's truly the best solution for our
+          employees and their careers.
+        </p>
+
+        <img src="./assets/About-double_quotes_DOWN.png" class="w-12 ml-auto mt-2">
+
+      </div>
+
+      <div class="w-4 h-4 bg-gray-50 rotate-45 mx-auto -mt-2"></div>
+
+      <div class="mt-6">
+        <p class="text-base font-medium text-gray-900 leading-[22px]">Satya Nadella</p>
+        <p class="text-sm font-normal text-gray-600 tracking-[-1%]">
+          CEO of <span class="text-blue-500 font-medium leading-[20px]">Microsoft</span>
+        </p>
+      </div>
+    </div>
+
+
+    <!-- card 3 -->
+    <div>
+      <div class="bg-gray-50 p-6 relative ">
+
+        <img src="./assets/About-double_quotes-UP.png" class="w-12 mb-2">
+
+        <p class="text-lg text-gray-900 leading-6 tracking-[-1.5%]">
+          In total, it was a big success, I would get emails about what
+          a fantastic resource it was.
+        </p>
+
+        <img src="./assets/About-double_quotes_DOWN.png" class="w-12 ml-auto mt-2">
+
+      </div>
+
+      <div class="w-4 h-4 bg-gray-50 rotate-45 mx-auto -mt-2"></div>
+
+      <div class="mt-6">
+        <p class="text-base font-medium text-gray-900 leading-[22px]">Ted Sarandos</p>
+        <p class="text-sm font-normal text-gray-600 tracking-[-1%]">
+          Chief Executive Officer of <span class="text-blue-500 font-medium leading-[20px]">Netflix</span>
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+              <!-- Footer -->
   <footer class="bg-gray-900">
     <div class="border-b border-gray-500">
       <div class="container py-20 flex justify-between">
@@ -378,7 +752,7 @@
 
             <div>
               <a
-                href="#"
+                href="./about.html"
                 class="group w-fit py-[6px] text-gray-500 text-sm leading-[22px] tracking-[-1%] hover:text-white hover:border-b-2 border-primary-500 flex items-center gap-3"
               >
                 About
@@ -400,7 +774,7 @@
                 </span>
               </a>
               <a
-                href="#"
+                href="./contact.html"
                 class="group w-fit py-[6px] text-gray-500 text-sm leading-[22px] tracking-[-1%] hover:text-white hover:border-b-2 border-primary-500 flex items-center gap-3"
               >
                 Contact
