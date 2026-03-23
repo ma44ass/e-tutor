@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -66,75 +66,1821 @@
         --color-warning-200: #fed1a5;
         --color-warning-100: #fff2e5;
 
-        --color-danger-900:#2D0E0E;
-        --color-danger-800:#5B1B1B;
-        --color-danger-700:#882929;
-        --color-danger-600:#B63636;
-        --color-danger-500:#E34444;
-        --color-danger-400:#E96969;
-        --color-danger-300:#EE8F8F;
-        --color-danger-200:#F4C8C8;
-        --color-danger-100:#FFF0F0;
+        --color-danger-900: #2d0e0e;
+        --color-danger-800: #5b1b1b;
+        --color-danger-700: #882929;
+        --color-danger-600: #b63636;
+        --color-danger-500: #e34444;
+        --color-danger-400: #e96969;
+        --color-danger-300: #ee8f8f;
+        --color-danger-200: #f4c8c8;
+        --color-danger-100: #fff0f0;
 
-            /* font */
-        --font-family: 'Inter', sans-serif;
-            /* weight */
-        --font-normal: 400;
-        --font-medium: 500;
-        --font-semibold: 600;
-            /* text size */
-        --text-8xl:80px;
-        --text-8xl-line-height:80px;
-        --text-7xl:72px;
-        --text-7xl-line-height:74px;
-        --text-6xl:64px;
-        --text-6xl-line-height:68px;
-        --text-5xl:48px;
-        --text-5xl-line-height:52px;
-        --text-4xl:40px;
-        --text-4xl-line-height:48px;
-        --text-3xl:32px;
-        --text-3xl-line-height:40px;
-        --text-2xl:24px;
-        --text-2xl-line-height:32px;
-        --text-lg:18px;
-        --text-lg-line-height:100%;
-        --text-base:16px;
-        --text-base-line-height:100%;
-        --text-sm:14px;
-        --text-sm-line-height:100%;
-        --text-xs:12px;
-        --text-xs-line-height:12px;
-        --text-xxs:10px;
-        --text-xxs-line-height:12px; 
+        /* font */
+        --font-inter: "Inter", sans-serif;
+        /* text size */
+        --text-8xl: 80px;
+        --text-8xl-line-height: 80px;
+        --text-7xl: 72px;
+        --text-7xl-line-height: 74px;
+        --text-6xl: 64px;
+        --text-6xl-line-height: 68px;
+        --text-5xl: 48px;
+        --text-5xl-line-height: 52px;
+        --text-4xl: 40px;
+        --text-4xl-line-height: 48px;
+        --text-3xl: 32px;
+        --text-3xl-line-height: 40px;
+        --text-2xl: 24px;
+        --text-2xl-line-height: 32px;
+        --text-lg: 18px;
+        --text-lg-line-height: 100%;
+        --text-base: 16px;
+        --text-base-line-height: 100%;
+        --text-sm: 14px;
+        --text-sm-line-height: 100%;
+        --text-xs: 12px;
+        --text-xs-line-height: 12px;
+        --text-xxs: 10px;
+        --text-xxs-line-height: 12px;
       }
-        .btn{
-        @apply px-8 font-semibold tracking-[-0.8%] leading-12;
+      .btn {
+        @apply px-8 font-semibold tracking-[-0.8%] leading-12 text-nowrap flex items-center gap-3 cursor-pointer;
       }
 
-      .btn-primary{
-        @apply bg-primary-500 text-white hover:bg-primary-600 hover:drop-shadow-[0_0_20px_rgba(204,82,43,0.5)]
+      .btn-primary {
+        @apply bg-primary-500 text-white hover:bg-primary-600 hover:drop-shadow-[0_0_20px_rgba(204,82,43,0.5)];
       }
 
-      .btn-secondary{
-        @apply  bg-primary-100 text-primary-500 hover:bg-primary-200 hover:text-primary-600
+      .btn-secondary {
+        @apply bg-primary-100 text-primary-500 hover:bg-primary-200 hover:text-primary-600;
       }
 
-      .btn-gray{
-        @apply bg-gray-800 text-white
+      .btn-gray {
+        @apply bg-gray-800 text-white;
       }
 
-      .btn-tertiary{
-        @apply bg-white text-primary-500 hover:bg-primary-100 text-primary-600
+      .btn-tertiary {
+        @apply bg-white text-primary-500 hover:bg-primary-100 text-primary-600;
       }
 
-      .btn-simple{
-        @apply text-primary-500 text-left hover:border-b-2 border-primary-500 px-0
+      .btn-simple {
+        @apply text-primary-500 text-left hover:border-b-2 border-primary-500 px-0;
       }
 
-      .container{@apply max-w-[1320px] mx-auto}
+      .container {
+        @apply max-w-[1320px] mx-auto px-6;
+      }
     </style>
   </head>
-  <body>
+  <body class="font-inter">
+    <header>
+      <nav
+        class="flex justify-between px-[32px] bg-gray-900 text-sm text-gray-500"
+      >
+        <div class="flex items-center font-normal space-x-[24px]">
+          <a
+            href="./index.html"
+            class="px-[12px] py-[16px] transition-all hover:text-white hover:shadow-[inset_0px_2px_0px_0px_#ff6636]"
+            style="box-shadow: 0px 2px 0px 0px #ff6636 inset"
+          >
+            Home
+          </a>
+
+          <a
+            href="./courses.html"
+            class="px-[12px] py-[16px] transition-all hover:text-white hover:shadow-[inset_0px_2px_0px_0px_#ff6636]"
+          >
+            Courses
+          </a>
+          <a
+            href="./about.html"
+            class="px-[12px] py-[16px] transition-all hover:text-white hover:shadow-[inset_0px_2px_0px_0px_#ff6636]"
+          >
+            About
+          </a>
+          <a
+            href="./contact.html"
+            class="px-[12px] py-[16px] transition-all hover:text-white hover:shadow-[inset_0px_2px_0px_0px_#ff6636]"
+          >
+            Contact
+          </a>
+          <a
+            href=""
+            class="px-[12px] py-[16px] transition-all hover:text-white hover:shadow-[inset_0px_2px_0px_0px_#ff6636]"
+          >
+            Become an Instructor
+          </a>
+        </div>
+
+        <div class="flex font-normal space-x-[24px] items-center">
+          <div
+            class="flex items-center gap-[6px] cursor-pointer hover:text-white"
+          >
+            <span>USD</span>
+            <img
+              src="./assets/chevronDown.png"
+              alt=""
+              class="w-[12px] h-[12px]"
+            />
+          </div>
+          <div
+            class="flex items-center gap-[6px] cursor-pointer hover:text-white"
+          >
+            <span>English</span>
+            <img
+              src="./assets/chevronDown.png"
+              alt=""
+              class="w-[12px] h-[12px]"
+            />
+          </div>
+        </div>
+      </nav>
+
+      <div class="flex justify-between px-[32px] py-[24px] bg-white">
+        <div class="flex items-center">
+          <div class="flex items-center space-x-[8px] whitespace-nowrap">
+            <img src="./assets/GraduationCap.svg" alt="logo" />
+            <a href="#" class="text-3xl font-semibold text-gray-900">E-tutor</a>
+          </div>
+          <div
+            class="flex items-center ml-[50px] border border-gray-100 px-[16px] py-[12px] w-[200px] h-[48px] bg-white"
+          >
+            <select
+              class="appearance-none bg-transparent text-base font-normal text-gray-700 outline-none cursor-pointer pr-[12px] h-full"
+            >
+              <option value="" selected>Browse</option>
+              <option value="1">Development</option>
+              <option value="2">Business</option>
+            </select>
+            <img
+              src="./assets/dropdow-icon.png"
+              alt="dropdow-icon"
+              class="cursor-pointer pl-[45px]"
+            />
+          </div>
+
+          <div
+            class="flex items-center px-[16px] w-[400px] h-full border border-gray-100 ml-[16px]"
+          >
+            <img
+              src="./assets/MagnifyingGlass.png"
+              alt="search"
+              class="w-[25px] h-[25px] shrink-0"
+            />
+            <input
+              type="text"
+              placeholder="What do you want learn..."
+              class="flex-1 px-[12px] outline-none bg-transparent text-base font-normal text-gray-900 placeholder-gray-400 h-full"
+            />
+          </div>
+        </div>
+
+        <div class="flex space-x-[24px] items-center">
+          <div>
+            <img
+              src="./assets/Bell.svg"
+              alt="bell-icon"
+              class="cursor-pointer"
+            />
+          </div>
+          <div>
+            <img
+              src="./assets/Heart.svg"
+              alt="heart-icon"
+              class="cursor-pointer"
+            />
+          </div>
+          <div>
+            <img
+              src="./assets/ShoppingCartSimple.svg"
+              alt="cart-icon"
+              class="cursor-pointer"
+            />
+          </div>
+
+          <div class="flex gap-[8px]">
+            <button class="btn btn-secondary text-primary-500">
+              Create Account
+            </button>
+            <button class="btn btn-primary">Sign in</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section
+        class="relative h-[600px] w-full flex items-center overflow-hidden"
+      >
+        <div class="container mx-auto z-20" style="max-width: 1320px">
+          <div class="w-1/2">
+            <h1 class="text-7xl font-semibold text-gray-900 mb-[40px]">
+              Learn with expert <br />anytime anywhere
+            </h1>
+            <p class="text-2xl text-gray-700 mb-[40px]">
+              Our mision is to help people to find the best course online and
+              learn with expert anytime, anywhere.
+            </p>
+            <button class="btn btn-primary">Create Account</button>
+          </div>
+        </div>
+
+        <div class="absolute top-0 right-0 h-full w-1/2 z-10">
+          <img
+            src="./assets/firstsection-img.svg"
+            alt="Instructor teaching"
+            class="h-full w-full object-cover"
+            style="clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%)"
+          />
+        </div>
+      </section>
+
+      <section class="bg-white py-[100px]">
+        <div class="container">
+          <h2
+            class="text-gray-900 text-4xl font-semibold text-center mb-[40px]"
+          >
+            Browse top category
+          </h2>
+
+          <div class="grid grid-cols-4 gap-[24px]">
+            <div
+              class="flex items-center p-[24px] bg-secondary-100 transition-all duration-300 hover:shadow-[0px_12px_32px_0px_#1D20261A] cursor-pointer"
+            >
+              <div
+                class="w-[64px] h-[64px] bg-white flex items-center justify-center shrink-0"
+              >
+                <img src="./assets/Cpu.png" alt="Label" class="w-8 h-8" />
+              </div>
+              <div class="ml-4 space-y-[8px]">
+                <h3 class="text-gray-900 text-base font-medium">Label</h3>
+                <p class="text-gray-600 text-sm font-normal">63,476 Courses</p>
+              </div>
+            </div>
+
+            <div
+              class="flex items-center p-[24px] bg-sucess-100 transition-all duration-300 hover:shadow-[0px_12px_32px_0px_#1D20261A] cursor-pointer"
+            >
+              <div
+                class="w-[64px] h-[64px] bg-white flex items-center justify-center shrink-0"
+              >
+                <img
+                  src="./assets/Handshake.png"
+                  alt="Business"
+                  class="w-8 h-8"
+                />
+              </div>
+              <div class="ml-4 space-y-[8px]">
+                <h3 class="text-gray-900 text-base font-medium">Business</h3>
+                <p class="text-gray-600 text-sm font-normal">52,822 Courses</p>
+              </div>
+            </div>
+
+            <div
+              class="flex items-center p-[24px] bg-warning-100 transition-all duration-300 hover:shadow-[0px_12px_32px_0px_#1D20261A] cursor-pointer"
+            >
+              <div
+                class="w-[64px] h-[64px] bg-white flex items-center justify-center shrink-0"
+              >
+                <img
+                  src="./assets/CreditCard.png"
+                  alt="Finance"
+                  class="w-8 h-8"
+                />
+              </div>
+              <div class="ml-4 space-y-[8px]">
+                <h3 class="text-gray-900 text-base font-medium">
+                  Finance & Accounting
+                </h3>
+                <p class="text-gray-600 text-sm font-normal">33,841 Courses</p>
+              </div>
+            </div>
+
+            <div
+              class="flex items-center p-[24px] bg-danger-100 transition-all duration-300 hover:shadow-[0px_12px_32px_0px_#1D20261A] cursor-pointer"
+            >
+              <div
+                class="w-[64px] h-[64px] bg-white flex items-center justify-center shrink-0"
+              >
+                <img
+                  src="./assets/ChartBarHorizontal.png"
+                  alt="IT"
+                  class="w-8 h-8"
+                />
+              </div>
+              <div class="ml-4 space-y-[8px]">
+                <h3 class="text-gray-900 text-base font-medium">
+                  IT & Software
+                </h3>
+                <p class="text-gray-600 text-sm font-normal">22,649 Courses</p>
+              </div>
+            </div>
+
+            <div
+              class="flex items-center p-[24px] bg-white shadow-[0px_12px_32px_0px_#1D20261A] transition-all duration-300 hover:shadow-[0px_12px_32px_0px_#1D20261A] cursor-pointer"
+            >
+              <div
+                class="w-[64px] h-[64px] bg-primary-500 flex items-center justify-center shrink-0"
+              >
+                <img
+                  src="./assets/BugDroid.png"
+                  alt="Development"
+                  class="w-8 h-8 brightness-0 invert"
+                />
+              </div>
+              <div class="ml-4 space-y-[8px]">
+                <h3
+                  class="text-gray-900 text-base font-medium whitespace-nowrap"
+                >
+                  Personal Development
+                </h3>
+                <p class="text-gray-600 text-sm font-normal">20,126 Courses</p>
+              </div>
+            </div>
+
+            <div
+              class="flex items-center p-[24px] bg-gray-50 transition-all duration-300 hover:shadow-[0px_12px_32px_0px_#1D20261A] cursor-pointer"
+            >
+              <div
+                class="w-[64px] h-[64px] bg-white flex items-center justify-center shrink-0"
+              >
+                <img src="./assets/Receipt.png" alt="Office" class="w-8 h-8" />
+              </div>
+              <div class="ml-4 space-y-[8px]">
+                <h3 class="text-gray-900 text-base font-medium">
+                  Office Productivity
+                </h3>
+                <p class="text-gray-600 text-sm font-normal">13,932 Courses</p>
+              </div>
+            </div>
+
+            <div
+              class="flex items-center p-[24px] bg-secondary-100 transition-all duration-300 hover:shadow-[0px_12px_32px_0px_#1D20261A] cursor-pointer"
+            >
+              <div
+                class="w-[64px] h-[64px] bg-white flex items-center justify-center shrink-0"
+              >
+                <img
+                  src="./assets/MegaphoneSimple.png"
+                  alt="Marketing"
+                  class="w-8 h-8"
+                />
+              </div>
+              <div class="ml-4 space-y-[8px]">
+                <h3 class="text-gray-900 text-base font-medium">Marketing</h3>
+                <p class="text-gray-600 text-sm font-normal">12,068 Courses</p>
+              </div>
+            </div>
+
+            <div
+              class="flex items-center p-[24px] bg-gray-50 transition-all duration-300 hover:shadow-[0px_12px_32px_0px_#1D20261A] cursor-pointer"
+            >
+              <div
+                class="w-[64px] h-[64px] bg-white flex items-center justify-center shrink-0"
+              >
+                <img
+                  src="./assets/Camera.png"
+                  alt="Photography"
+                  class="w-8 h-8"
+                />
+              </div>
+              <div class="ml-4 space-y-[8px]">
+                <h3 class="text-gray-900 text-base font-medium">
+                  Photography & Video
+                </h3>
+                <p class="text-gray-600 text-sm font-normal">6,196 Courses</p>
+              </div>
+            </div>
+
+            <div
+              class="flex items-center p-[24px] bg-warning-100 transition-all duration-300 hover:shadow-[0px_12px_32px_0px_#1D20261A] cursor-pointer"
+            >
+              <div
+                class="w-[64px] h-[64px] bg-white flex items-center justify-center shrink-0"
+              >
+                <img
+                  src="./assets/Package.png"
+                  alt="Lifestyle"
+                  class="w-8 h-8"
+                />
+              </div>
+              <div class="ml-4 space-y-[8px]">
+                <h3 class="text-gray-900 text-base font-medium">Lifestyle</h3>
+                <p class="text-gray-600 text-sm font-normal">2,736 Courses</p>
+              </div>
+            </div>
+
+            <div
+              class="flex items-center p-[24px] bg-danger-100 transition-all duration-300 hover:shadow-[0px_12px_32px_0px_#1D20261A] cursor-pointer"
+            >
+              <div
+                class="w-[64px] h-[64px] bg-white flex items-center justify-center shrink-0"
+              >
+                <img src="./assets/PenNib.png" alt="Design" class="w-8 h-8" />
+              </div>
+              <div class="ml-4 space-y-[8px]">
+                <h3 class="text-gray-900 text-base font-medium">Design</h3>
+                <p class="text-gray-600 text-sm font-normal">2,600 Courses</p>
+              </div>
+            </div>
+
+            <div
+              class="flex items-center p-[24px] bg-sucess-100 transition-all duration-300 hover:shadow-[0px_12px_32px_0px_#1D20261A] cursor-pointer"
+            >
+              <div
+                class="w-[64px] h-[64px] bg-white flex items-center justify-center shrink-0"
+              >
+                <img
+                  src="./assets/FirstAidKit.png"
+                  alt="Health"
+                  class="w-8 h-8"
+                />
+              </div>
+              <div class="ml-4 space-y-[8px]">
+                <h3 class="text-gray-900 text-base font-medium">
+                  Health & Fitness
+                </h3>
+                <p class="text-gray-600 text-sm font-normal">1,678 Courses</p>
+              </div>
+            </div>
+
+            <div
+              class="flex items-center p-[24px] bg-warning-100 transition-all duration-300 hover:shadow-[0px_12px_32px_0px_#1D20261A] cursor-pointer"
+            >
+              <div
+                class="w-[64px] h-[64px] bg-white flex items-center justify-center shrink-0"
+              >
+                <img
+                  src="./assets/Headphones.png"
+                  alt="Music"
+                  class="w-8 h-8"
+                />
+              </div>
+              <div class="ml-4 space-y-[8px]">
+                <h3 class="text-gray-900 text-base font-medium">Music</h3>
+                <p class="text-gray-600 text-sm font-normal">959 Courses</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="mt-[48px] text-sm font-normal text-gray-700 flex items-center justify-center"
+          >
+            We have more category & subcategory.
+            <button
+              class="btn btn-simple font-medium ml-[12px] inline-flex items-center gap-2"
+            >
+              Browse All
+              <img
+                src="./assets/arrowRight.png"
+                alt="ArrowRight"
+                class="w-[6.75] h-[13.5]"
+              />
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="bg-gray-50 py-20">
+        <!-- Container -->
+        <div class="container">
+          <h2 class="text-3xl font-semibold text-gray-900 text-center mb-12">
+            Best selling courses
+          </h2>
+
+          <!-- card grid -->
+          <div class="grid grid-cols-5 gap-6">
+            <!-- card1 -->
+            <div class="bg-white shadow-sm flex flex-col gap-3 overflow-hidden">
+              <img
+                src="./assets/design.svg"
+                alt=""
+                class="w-full h-[183px] object-cover"
+              />
+
+              <div class="flex justify-between items-center px-4">
+                <span
+                  class="text-xxs font-semibold uppercase bg-primary-100 text-primary-700 px-3 py-1"
+                >
+                  Design
+                </span>
+                <span class="text-sm font-semibold text-primary-500">
+                  $57
+                </span>
+              </div>
+
+              <p
+                class="text-sm font-medium text-gray-900 leading-5 h-[48px] mb-[14px] px-4"
+              >
+                Machine Learning A-Z™: Hands-On Python & R In Data...
+              </p>
+
+              <div
+                class="flex justify-between text-xs text-gray-500 pt-3 border-t border-[#E9EAF0]/70 px-4 pb-4"
+              >
+                <span>⭐ 5.0</span>
+                <span><span class="text-gray-700">265.7K</span> students</span>
+              </div>
+            </div>
+
+            <!-- card2 -->
+            <div class="bg-white shadow-sm flex flex-col gap-3">
+              <img
+                src="./assets/developments.png"
+                alt=""
+                class="w-full h-[183px] object-cover"
+              />
+
+              <div class="flex justify-between items-center px-4">
+                <span
+                  class="text-xxs font-medium uppercase bg-secondary-100 text-secondary-700 px-3 py-1"
+                  >DEVELOPMENT</span
+                >
+                <span class="text-sm font-semibold text-primary-500">$57</span>
+              </div>
+
+              <p
+                class="text-sm font-medium text-gray-900 leading-5 h-[48px] mb-[14px] px-4"
+              >
+                The Complete 2021 Web Development Bootcamp
+              </p>
+
+              <div
+                class="flex justify-between text-xs text-gray-500 pt-3 border-t border-[#E9EAF0]/70 px-4 pb-4"
+              >
+                <span>⭐ 5.0</span>
+                <span><span class="text-gray-700">265.7K</span> students</span>
+              </div>
+            </div>
+            <!-- card3 -->
+            <div class="bg-white shadow-sm flex flex-col gap-3">
+              <img
+                src="./assets/business.svg"
+                alt="Business"
+                class="w-full h-[183px] object-cover"
+              />
+
+              <div class="flex justify-between items-center px-4">
+                <span
+                  class="text-xxs font-medium uppercase bg-sucess-100 text-sucess-700 px-3 py-1"
+                  >BUSINESS</span
+                >
+                <span class="text-sm font-semibold text-primary-500">$57</span>
+              </div>
+
+              <p
+                class="text-sm font-medium text-gray-900 leading-5 h-[48px] mb-[14px] px-4"
+              >
+                Learn Python Programming Masterclass
+              </p>
+
+              <div
+                class="flex justify-between text-xs text-gray-500 pt-3 border-t border-[#E9EAF0]/70 px-4 pb-4"
+              >
+                <span>⭐ 5.0</span>
+                <span><span class="text-gray-700">265.7K</span> students</span>
+              </div>
+            </div>
+
+            <!-- card4 -->
+            <div class="bg-white shadow-sm flex flex-col gap-3">
+              <img
+                src="./assets/Health & fitness.svg"
+                alt="Marketing"
+                class="w-full h-[183px] object-cover"
+              />
+
+              <div class="flex justify-between items-center px-4">
+                <span
+                  class="text-xxs font-medium uppercase bg-secondary-100 text-secondary-700 px-3 py-1"
+                  >MARKETING</span
+                >
+                <span class="text-sm font-semibold text-primary-500">$57</span>
+              </div>
+
+              <p
+                class="text-sm font-medium text-gray-900 leading-5 h-[48px] mb-[14px] px-4"
+              >
+                The Complete Digital Marketing Course - 12 Courses in 1
+              </p>
+
+              <div
+                class="flex justify-between text-xs text-gray-500 pt-3 border-t border-[#E9EAF0]/70 px-4 pb-4"
+              >
+                <span>⭐ 5.0</span>
+                <span><span class="text-gray-700">265.7K</span> students</span>
+              </div>
+            </div>
+
+            <!-- card5 -->
+            <div class="bg-white shadow-sm flex flex-col gap-3">
+              <img
+                src="./assets/it & software.svg"
+                alt="IT & Software"
+                class="w-full h-[183px] object-cover"
+              />
+
+              <div class="flex justify-between items-center px-4">
+                <span
+                  class="text-xxs font-medium uppercase bg-danger-100 text-danger-700 px-3 py-1"
+                  >IT & SOFTWARE</span
+                >
+                <span class="text-sm font-semibold text-primary-500">$57</span>
+              </div>
+
+              <p
+                class="text-sm font-medium text-gray-900 leading-5 h-[48px] mb-[14px] px-4"
+              >
+                Reiki Level I, II and Master/Teacher Program
+              </p>
+
+              <div
+                class="flex justify-between text-xs text-gray-500 pt-3 border-t border-[#E9EAF0]/70 px-4 pb-4"
+              >
+                <span>⭐ 5.0</span>
+                <span><span class="text-gray-700">265.7K</span> students</span>
+              </div>
+            </div>
+
+            <!-- card6 -->
+            <div class="bg-white shadow-sm flex flex-col gap-3">
+              <img
+                src="./assets/music.svg"
+                alt="Music"
+                class="w-full h-[183px] object-cover"
+              />
+
+              <div class="flex justify-between items-center px-4">
+                <span
+                  class="text-xxs font-medium uppercase bg-warning-100 text-warning-800 px-3 py-1"
+                  >MUSIC</span
+                >
+                <span class="text-sm font-semibold text-primary-500">$57</span>
+              </div>
+
+              <p
+                class="text-sm font-medium text-gray-900 leading-5 h-[48px] mb-[14px] px-4"
+              >
+                The Complete Foundation Stock Trading Course
+              </p>
+
+              <div
+                class="flex justify-between text-xs text-gray-500 pt-3 border-t border-[#E9EAF0]/70 px-4 pb-4"
+              >
+                <span>⭐ 5.0</span>
+                <span><span class="text-gray-700">265.7K</span> students</span>
+              </div>
+            </div>
+
+            <!-- card7 -->
+            <div class="bg-white shadow-sm flex flex-col gap-3">
+              <img
+                src="./assets/marketing.svg"
+                alt="Marketing"
+                class="w-full h-[183px] object-cover"
+              />
+
+              <div class="flex justify-between items-center px-4">
+                <span
+                  class="text-xxs font-medium uppercase bg-secondary-100 text-secondary-700 px-3 py-1"
+                  >MARKETING</span
+                >
+                <span class="text-sm font-semibold text-primary-500">$57</span>
+              </div>
+
+              <p
+                class="text-sm font-medium text-gray-900 leading-5 h-[48px] mb-[14px] px-4"
+              >
+                Beginner to Pro in Excel: Financial Modeling and Valuati...
+              </p>
+
+              <div
+                class="flex justify-between text-xs text-gray-500 pt-3 border-t border-[#E9EAF0]/70 px-4 pb-4"
+              >
+                <span>⭐ 5.0</span>
+                <span><span class="text-gray-700">265.7K</span> students</span>
+              </div>
+            </div>
+
+            <!-- card8 -->
+            <div class="bg-white shadow-sm flex flex-col gap-3">
+              <img
+                src="./assets/Health.png"
+                alt="Health & Fitness"
+                class="w-full h-[183px] object-cover"
+              />
+
+              <div class="flex justify-between items-center px-4">
+                <span
+                  class="text-xxs font-medium uppercase bg-sucess-100 text-sucess-700 px-3 py-1"
+                >
+                  HEALTH & FITNESS
+                </span>
+                <span class="text-sm font-semibold text-primary-500">
+                  $57
+                </span>
+              </div>
+
+              <p
+                class="text-sm font-medium text-gray-900 leading-5 h-[48px] mb-[14px] px-4"
+              >
+                The Python Mega Course: Build 10 Real World Applications
+              </p>
+
+              <div
+                class="flex justify-between text-xs text-gray-500 pt-3 border-t border-[#E9EAF0]/70 px-4 pb-4"
+              >
+                <span>⭐ 5.0</span>
+                <span><span class="text-gray-700">265.7K</span> students</span>
+              </div>
+            </div>
+
+            <!-- card9 -->
+            <div class="bg-white shadow-sm flex flex-col gap-3">
+              <img
+                src="./assets/design-2.png"
+                alt="Design"
+                class="w-full h-[183px] object-cover"
+              />
+
+              <div class="flex justify-between items-center px-4">
+                <span
+                  class="text-xxs font-semibold uppercase bg-primary-100 text-primary-700 px-3 py-1"
+                >
+                  DESIGN
+                </span>
+                <span class="text-sm font-semibold text-primary-500">
+                  $57
+                </span>
+              </div>
+
+              <p
+                class="text-sm font-medium text-gray-900 leading-5 h-[48px] mb-[14px] px-4"
+              >
+                Copywriting - Become a Freelance Copywriter, your ow...
+              </p>
+
+              <div
+                class="flex justify-between text-xs text-gray-500 pt-3 border-t border-[#E9EAF0]/70 px-4 pb-4"
+              >
+                <span>⭐ 5.0</span>
+                <span><span class="text-gray-700">265.7K</span> students</span>
+              </div>
+            </div>
+
+            <!-- card10 -->
+            <div class="bg-white shadow-sm flex flex-col gap-3">
+              <img
+                src="./assets/lifestyle.svg"
+                alt="Lifestyle"
+                class="w-full h-[183px] object-cover"
+              />
+
+              <div class="flex justify-between items-center px-4">
+                <span
+                  class="text-xxs font-medium uppercase bg-warning-100 text-warning-800 px-3 py-1"
+                >
+                  LIFESTYLE
+                </span>
+                <span class="text-sm font-semibold text-primary-500">
+                  $57
+                </span>
+              </div>
+
+              <p
+                class="text-sm font-medium text-gray-900 leading-5 h-[48px] mb-[14px] px-4"
+              >
+                Google Analytics Certification - Learn How To Pass The Exam
+              </p>
+
+              <div
+                class="flex justify-between text-xs text-gray-500 pt-3 border-t border-[#E9EAF0]/70 px-4 pb-4"
+              >
+                <span>⭐ 5.0</span>
+                <span><span class="text-gray-700">265.7K</span> students</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="bg-[linear-gradient(to_bottom,#F5F7FA_50%,white_50%)] pt-[67px]"
+      >
+        <div
+          class="bg-white max-w-[1480px] mx-auto py-[80px] border border-gray-100"
+        >
+          <div class="flex justify-between mb-12 container">
+            <h2 class="text-3xl font-semibold text-gray-900">
+              Recently added courses
+            </h2>
+
+            <p class="text-gray-600 max-w-[520px] text-sm leading-[22px]">
+              Vestibulum sed dolor sed diam mollis maximus vel nec dolor. Donec
+              varius purus et eleifend porta.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-2 gap-x-6 gap-y-[26px] container">
+            <div
+              class="bg-white shadow-sm overflow-hidden flex hover:shadow-md transition"
+            >
+              <img
+                src="./assets/Health & fitness.svg"
+                class="w-[220px] h-full object-cover"
+              />
+
+              <div class="flex flex-col justify-between p-6 flex-1">
+                <div>
+                  <div class="flex justify-between items-center mb-2">
+                    <span
+                      class="text-[11px] font-semibold uppercase bg-sucess-100 text-sucess-700 px-3 py-1"
+                    >
+                      HEALTH & FITNESS
+                    </span>
+
+                    <div class="text-right">
+                      <span class="text-sm font-semibold text-gray-900"
+                        >$14.00</span
+                      >
+                      <span class="text-xs text-gray-400 line-through ml-2"
+                        >$26.00</span
+                      >
+                    </div>
+                  </div>
+
+                  <p class="text-sm font-medium text-gray-900 leading-5 mb-3">
+                    Investing In Stocks The Complete Course! (13 Hours)
+                  </p>
+
+                  <div class="flex items-center justify-between text-xs mb-3">
+                    <div class="flex items-center gap-2 text-gray-600">
+                      <img
+                        src="./assets/Kevin.png"
+                        class="w-5 h-5 rounded-full"
+                      />
+                      <span>Kevin Gilbert</span>
+                    </div>
+
+                    <div class="flex items-center gap-1 text-gray-500">
+                      <span class="text-yellow-500">⭐</span>
+                      <span class="text-gray-900 font-medium">5.0</span>
+                      <span>(357,914)</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="flex items-center gap-6 text-xs text-gray-600 pt-4 border-t border-[#E9EAF0]"
+                >
+                  <div class="flex items-center gap-2">
+                    <img src="./assets/User (1).png" class="w-4 h-4" />
+                    <span>265.7K students</span>
+                  </div>
+
+                  <div class="flex items-center gap-2">
+                    <img src="./assets/bar-chart.png" class="w-4 h-4" />
+                    <span>Beginner</span>
+                  </div>
+
+                  <div class="flex items-center gap-2">
+                    <img src="./assets/Clock.png" class="w-4 h-4" />
+                    <span>6 hour</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- card2 -->
+
+            <div
+              class="bg-white shadow-sm overflow-hidden flex hover:shadow-md transition"
+            >
+              <img
+                src="./assets/it & software.svg"
+                class="w-[220px] h-full object-cover"
+              />
+
+              <div class="flex flex-col justify-between p-6 flex-1">
+                <div>
+                  <div class="flex justify-between items-center mb-2">
+                    <span
+                      class="text-[11px] font-semibold uppercase bg-primary-100 text-primary-700 px-3 py-1"
+                    >
+                      PERSONAL DEVELOPMENT
+                    </span>
+
+                    <div class="text-right">
+                      <span class="text-sm font-semibold text-gray-900"
+                        >$14.00</span
+                      >
+                      <span class="text-xs text-gray-400 line-through ml-2"
+                        >$26.00</span
+                      >
+                    </div>
+                  </div>
+                  <p class="text-sm font-medium text-gray-900 leading-5 mb-3">
+                    Google Analytics Certification - Learn How To...
+                  </p>
+
+                  <div class="flex items-center justify-between text-xs mb-3">
+                    <div class="flex items-center gap-2 text-gray-600">
+                      <img
+                        src="./assets/Kevin.png"
+                        class="w-5 h-5 rounded-full"
+                      />
+                      <span>Kevin Gilbert</span>
+                    </div>
+
+                    <div class="flex items-center gap-1 text-gray-500">
+                      <span class="text-yellow-500">⭐</span>
+                      <span class="text-gray-900 font-medium">5.0</span>
+                      <span>(357,914)</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="flex items-center gap-6 text-xs text-gray-600 pt-4 border-t border-[#E9EAF0]"
+                >
+                  <div class="flex items-center gap-2">
+                    <img src="./assets/User (1).png" class="w-4 h-4" />
+                    <span>265.7K students</span>
+                  </div>
+
+                  <div class="flex items-center gap-2">
+                    <img src="./assets/bar-chart.png" class="w-4 h-4" />
+                    <span>Beginner</span>
+                  </div>
+
+                  <div class="flex items-center gap-2">
+                    <img src="./assets/Clock.png" class="w-4 h-4" />
+                    <span>6 hour</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- card3 -->
+
+            <div
+              class="bg-white shadow-sm overflow-hidden flex hover:shadow-md transition"
+            >
+              <img
+                src="./assets/design-2.png"
+                class="w-[220px] h-full object-cover"
+              />
+
+              <div class="flex flex-col justify-between p-6 flex-1">
+                <div>
+                  <div class="flex justify-between items-center mb-2">
+                    <span
+                      class="text-[11px] font-semibold uppercase bg-gray-50 text-gray-900 px-3 py-1"
+                    >
+                      PRODUCTIVITY
+                    </span>
+
+                    <div class="text-right">
+                      <span class="text-sm font-semibold text-gray-900"
+                        >$14.00</span
+                      >
+                      <span class="text-xs text-gray-400 line-through ml-2"
+                        >$26.00</span
+                      >
+                    </div>
+                  </div>
+
+                  <p
+                    class="text-sm font-medium text-primary-500 leading-5 mb-3"
+                  >
+                    Adobe XD for Web Design: Essential Principles
+                  </p>
+
+                  <div class="flex items-center justify-between text-xs mb-3">
+                    <div class="flex items-center gap-2 text-gray-600">
+                      <img
+                        src="./assets/Kevin.png"
+                        class="w-5 h-5 rounded-full"
+                      />
+                      <span>Kevin Gilbert</span>
+                    </div>
+
+                    <div class="flex items-center gap-1 text-gray-500">
+                      <span class="text-yellow-500">⭐</span>
+                      <span class="text-gray-900 font-medium">5.0</span>
+                      <span>(357,914)</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="flex items-center gap-6 text-xs text-gray-600 pt-4 border-t border-[#E9EAF0]"
+                >
+                  <div class="flex items-center gap-2">
+                    <img src="./assets/User (1).png" class="w-4 h-4" />
+                    <span>265.7K students</span>
+                  </div>
+
+                  <div class="flex items-center gap-2">
+                    <img src="./assets/bar-chart.png" class="w-4 h-4" />
+                    <span>Beginner</span>
+                  </div>
+
+                  <div class="flex items-center gap-2">
+                    <img src="./assets/Clock.png" class="w-4 h-4" />
+                    <span>6 hour</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-white shadow-sm overflow-hidden flex hover:shadow-md transition"
+            >
+              <img
+                src="./assets/marketing.svg"
+                class="w-[220px] h-full object-cover"
+              />
+
+              <div class="flex flex-col justify-between p-6 flex-1">
+                <div>
+                  <div class="flex justify-between items-center mb-2">
+                    <span
+                      class="text-[11px] font-semibold uppercase bg-secondary-100 text-secondary-700 px-3 py-1"
+                    >
+                      MUSIC
+                    </span>
+
+                    <div class="text-right">
+                      <span class="text-sm font-semibold text-gray-900"
+                        >$14.00</span
+                      >
+                      <span class="text-xs text-gray-400 line-through ml-2"
+                        >$26.00</span
+                      >
+                    </div>
+                  </div>
+
+                  <p class="text-sm font-medium text-gray-900 leading-5 mb-3">
+                    The Python Mega Course: Build 10 Real World ...
+                  </p>
+
+                  <div class="flex items-center justify-between text-xs mb-3">
+                    <div class="flex items-center gap-2 text-gray-600">
+                      <img
+                        src="./assets/Kevin.png"
+                        class="w-5 h-5 rounded-full"
+                      />
+                      <span>Kevin Gilbert</span>
+                    </div>
+
+                    <div class="flex items-center gap-1 text-gray-500">
+                      <span class="text-yellow-500">⭐</span>
+                      <span class="text-gray-900 font-medium">5.0</span>
+                      <span>(357,914)</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="flex items-center gap-6 text-xs text-gray-600 pt-4 border-t border-[#E9EAF0]"
+                >
+                  <div class="flex items-center gap-2">
+                    <img src="./assets/User (1).png" class="w-4 h-4" />
+                    <span>265.7K students</span>
+                  </div>
+
+                  <div class="flex items-center gap-2">
+                    <img src="./assets/bar-chart.png" class="w-4 h-4" />
+                    <span>Beginner</span>
+                  </div>
+
+                  <div class="flex items-center gap-2">
+                    <img src="./assets/Clock.png" class="w-4 h-4" />
+                    <span>6 hour</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container">
+        <h2
+          class="text-3xl font-semibold text-gray-900 text-center mb-12 mt-20"
+        >
+          Recently added courses
+        </h2>
+
+        <!-- card grid -->
+        <div class="grid grid-cols-4 gap-6 mb-10">
+          <div class="bg-white shadow-sm flex flex-col gap-3">
+            <img
+              src="./assets/Course Images(12).svg"
+              alt="DESIGN"
+              class="w-full h-[183px] object-cover"
+            />
+
+            <div class="flex justify-between items-center px-4">
+              <span
+                class="text-xxs font-medium uppercase bg-primary-100 text-primary-700 px-3 py-1"
+              >
+                DESIGN
+              </span>
+              <span class="text-sm font-semibold text-primary-500"> $57 </span>
+            </div>
+
+            <p
+              class="text-sm font-medium text-gray-900 leading-5 h-[48px] mb-[14px] px-4"
+            >
+              The Python Mega Course: Build 10 Real World Applications
+            </p>
+
+            <div
+              class="flex justify-between text-xs text-gray-500 pt-3 border-t border-[#E9EAF0]/70 px-4 pb-4"
+            >
+              <span>⭐ 5.0</span>
+              <span><span class="text-gray-700">265.7K</span> students</span>
+            </div>
+          </div>
+
+          <div class="bg-white shadow-sm flex flex-col gap-3">
+            <img
+              src="./assets/it & software.svg"
+              alt="IT & Software"
+              class="w-full h-[183px] object-cover"
+            />
+
+            <div class="flex justify-between items-center px-4">
+              <span
+                class="text-xxs font-medium uppercase bg-danger-100 text-danger-700 px-3 py-1"
+                >IT & SOFTWARE</span
+              >
+              <span class="text-sm font-semibold text-primary-500">$57</span>
+            </div>
+
+            <p
+              class="text-sm font-medium text-gray-900 leading-5 h-[48px] mb-[14px] px-4"
+            >
+              Facebook Ads & Facebook Marketing MASTERY 2021 Cours...
+            </p>
+
+            <div
+              class="flex justify-between text-xs text-gray-500 pt-3 border-t border-[#E9EAF0]/70 px-4 pb-4"
+            >
+              <span>⭐ 5.0</span>
+              <span><span class="text-gray-700">265.7K</span> students</span>
+            </div>
+          </div>
+
+          <div class="bg-white shadow-sm flex flex-col gap-3">
+            <img
+              src="./assets/development2.png"
+              alt=""
+              class="w-full h-[183px] object-cover"
+            />
+
+            <div class="flex justify-between items-center px-4">
+              <span
+                class="text-xxs font-medium uppercase bg-secondary-100 text-secondary-700 px-3 py-1"
+                >DEVELOPMENT</span
+              >
+              <span class="text-sm font-semibold text-primary-500">$57</span>
+            </div>
+
+            <p
+              class="text-sm font-medium text-gray-900 leading-5 h-[48px] mb-[14px] px-4"
+            >
+              2021 Complete Python Bootcamp From Zero to Hero in Python
+            </p>
+
+            <div
+              class="flex justify-between text-xs text-gray-500 pt-3 border-t border-[#E9EAF0]/70 px-4 pb-4"
+            >
+              <span>⭐ 5.0</span>
+              <span><span class="text-gray-700">265.7K</span> students</span>
+            </div>
+          </div>
+
+          <div class="bg-white shadow-sm flex flex-col gap-3">
+            <img
+              src="./assets/Course Images(14).svg"
+              alt="Marketing"
+              class="w-full h-[183px] object-cover"
+            />
+
+            <div class="flex justify-between items-center px-4">
+              <span
+                class="text-xxs font-medium uppercase bg-secondary-100 text-secondary-700 px-3 py-1"
+                >MARKETING</span
+              >
+              <span class="text-sm font-semibold text-primary-500">$57</span>
+            </div>
+
+            <p
+              class="text-sm font-medium text-gray-900 leading-5 h-[48px] mb-[14px] px-4"
+            >
+              How to get Diamond in soloQ | League of Legends | Season 11
+            </p>
+
+            <div
+              class="flex justify-between text-xs text-gray-500 pt-3 border-t border-[#E9EAF0]/70 px-4 pb-4"
+            >
+              <span>⭐ 5.0</span>
+              <span><span class="text-gray-700">265.7K</span> students</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-center mt-12 mb-20">
+          <button class="btn btn-secondary flex items-center gap-2">
+            <span>Browse All Courses</span>
+            <span> <img src="assets/ArrowRight.svg" alt="" srcset="" /></span>
+          </button>
+        </div>
+      </section>
+      <section
+        class="text-gray-900 bg-[linear-gradient(to_bottom,#F5F7FA_60%,white_60%)] space-y-[80px]"
+      >
+        <!--Become an instructor-->
+        <div class="bg-gray-50 pt-20 pb-[60px]">
+          <div class="container">
+            <div class="grid grid-cols-2 gap-6">
+              <div
+                class="bg-linear-to-r from bg-primary-600 to bg-primary-500 text-white flex items-center justify-between pt-10 pl-10"
+              >
+                <div class="space-y-6 pb-10">
+                  <h3 class="text-3xl">Become an instructor</h3>
+                  <p class="max-w-[400px]">
+                    Instructors from around the world teach millions of students
+                    on Udemy. We provide the tools and skills to teach what you
+                    love.
+                  </p>
+                  <button class="btn btn-tertiary flex items-center gap-3">
+                    Start teaching
+                    <span><img src="assets/ArrowRight.svg" alt="" /></span>
+                  </button>
+                </div>
+                <div>
+                  <img
+                    src="./assets/be_an_instructor.svg"
+                    alt=""
+                    class="object-cover h-full"
+                  />
+                </div>
+              </div>
+
+              <div class="p-10 bg-white space-y-[27px]">
+                <h3 class="tracking-[-1%] font-semibold text-3xl">
+                  Your teaching & earning steps
+                </h3>
+                <div class="grid grid-cols-2 gap-y-5">
+                  <div class="flex gap-4 flex items-center">
+                    <div
+                      class="h-[52px] w-[52px] rounded-full bg-secondary-100 flex items-center justify-center text-secondary-500 text-2xl font-semibold"
+                    >
+                      1
+                    </div>
+                    <p>Apply to become instructor</p>
+                  </div>
+                  <div class="flex gap-4 flex items-center">
+                    <div
+                      class="h-[52px] w-[52px] rounded-full bg-danger-100 flex items-center justify-center text-primary-500 text-2xl font-semibold"
+                    >
+                      2
+                    </div>
+                    <p>Build & edit your profile</p>
+                  </div>
+                  <div class="flex gap-4 flex items-center">
+                    <div
+                      class="h-[52px] w-[52px] rounded-full bg-danger-100 flex items-center justify-center text-danger-500 text-2xl font-semibold"
+                    >
+                      3
+                    </div>
+                    <p>Create your new course</p>
+                  </div>
+                  <div class="flex gap-4 flex items-center">
+                    <div
+                      class="h-[52px] w-[52px] rounded-full bg-sucess-100 flex items-center justify-center text-sucess-500 text-2xl font-semibold"
+                    >
+                      4
+                    </div>
+                    <p>Start teaching & earning</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--instructor of the month-->
+
+        <div
+          class="space-y-10 pt-20 pb-[85px] border border-gray-100 bg-white max-w-[1480px] mx-auto"
+        >
+          <h2 class="text-center text-4xl tracking-[-1%] font-semibold">
+            Top instructor of the month
+          </h2>
+
+          <div class="grid grid-cols-5 gap-[25px] container">
+            <!--Instructor 1-->
+            <div class="border border-gray-100">
+              <img src="assets/devon.svg" alt="" class="w-full" />
+              <div class="text-center py-3 border-b border-gray-100">
+                <p class="font-medium leading-[22px]">Devon Lane</p>
+                <p class="text-gray-500 tracking-[-1%] text-sm leading-[22px]">
+                  Senior Developer
+                </p>
+              </div>
+
+              <div class="flex justify-between items-center px-4">
+                <div class="flex space-x-[5px]">
+                  <img src="assets/Star.svg" alt="" srcset="" />
+                  <p>4.6</p>
+                </div>
+
+                <p class="py-3">
+                  854
+                  <span
+                    class="text-gray-500 tracking-[-1%] text-sm leading-[22px]"
+                    >students</span
+                  >
+                </p>
+              </div>
+            </div>
+            <!--Instructor 2-->
+            <div class="border border-gray-100">
+              <img src="assets/darell.svg" alt="" class="w-full" />
+              <div class="text-center py-3 border-b border-gray-100">
+                <p class="font-medium leading-[22px]">Darrell Steward</p>
+                <p class="text-gray-500 tracking-[-1%] text-sm leading-[22px]">
+                  Digital Product Designer
+                </p>
+              </div>
+
+              <div class="flex justify-between items-center px-4">
+                <div class="flex space-x-[5px]">
+                  <img src="assets/Star.svg" alt="" srcset="" />
+                  <p>4.9</p>
+                </div>
+
+                <p class="py-3">
+                  451,444
+                  <span
+                    class="text-gray-500 tracking-[-1%] text-sm leading-[22px]"
+                    >students</span
+                  >
+                </p>
+              </div>
+            </div>
+            <!--Instructor 3-->
+            <div class="border border-gray-100">
+              <img src="assets/jane.svg" alt="" class="w-full" />
+              <div class="text-center py-3 border-b border-gray-100">
+                <p class="font-medium leading-[22px]">Jane Cooper</p>
+                <p class="text-gray-500 tracking-[-1%] text-sm leading-[22px]">
+                  UI/UX Designer
+                </p>
+              </div>
+
+              <div class="flex justify-between items-center px-4">
+                <div class="flex space-x-[5px]">
+                  <img src="assets/Star.svg" alt="" srcset="" />
+                  <p>4.8</p>
+                </div>
+
+                <p class="py-3">
+                  435,671
+                  <span
+                    class="text-gray-500 tracking-[-1%] text-sm leading-[22px]"
+                    >students</span
+                  >
+                </p>
+              </div>
+            </div>
+            <!--Instructor 4-->
+            <div class="border border-gray-100">
+              <img src="assets/albert.svg" alt="" class="w-full" />
+              <div class="text-center py-3 border-b border-gray-100">
+                <p class="font-medium leading-[22px]">Albert Flores</p>
+                <p class="text-gray-500 tracking-[-1%] text-sm leading-[22px]">
+                  Adobe Instructor
+                </p>
+              </div>
+
+              <div class="flex justify-between items-center px-4">
+                <div class="flex space-x-[5px]">
+                  <img src="assets/Star.svg" alt="" srcset="" />
+                  <p>4.7</p>
+                </div>
+
+                <p class="py-3">
+                  511,123
+                  <span
+                    class="text-gray-500 tracking-[-1%] text-sm leading-[22px]"
+                    >students</span
+                  >
+                </p>
+              </div>
+            </div>
+            <!--Instructor 5-->
+            <div class="border border-gray-100">
+              <img src="assets/katheryn.svg" alt="" class="w-full" />
+              <div class="text-center py-3 border-b border-gray-100">
+                <p class="font-medium leading-[22px]">Kathryn Murphy</p>
+                <p class="text-gray-500 tracking-[-1%] text-sm leading-[22px]">
+                  Lead Developer
+                </p>
+              </div>
+
+              <div class="flex justify-between items-center px-4">
+                <div class="flex space-x-[5px]">
+                  <img src="assets/Star.svg" alt="" srcset="" />
+                  <p>4.2</p>
+                </div>
+
+                <p class="py-3">
+                  2711
+                  <span
+                    class="text-gray-500 tracking-[-1%] text-sm leading-[22px]"
+                    >students</span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 justify-center">
+            <p
+              class="text-center text-gray-500 text-sm leading-[22px] tracking-[-1%]"
+            >
+              Thousands of students waiting for a instructor. Start teaching &
+              earning now!
+            </p>
+            <button class="btn btn-simple flex items-center gap-2">
+              Become Instructor <img src="./assets/ArrowRight.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-20">
+        <!--Trusted companies-->
+        <div class="container flex justify-between items-center">
+          <div class="space-y-6 max-w-[424px]">
+            <h2 class="text-gray-900 font-semibold -tracking-[1%] text-3xl">
+              6.3k trusted companies
+            </h2>
+            <p class="text-gray-600 text-sm leading-[22px] max-w-[312px]">
+              Nullam egestas tellus at enim ornare tristique. Class aptent
+              taciti sociosqu ad litora torquent per conubia nostra.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-4 gap-6">
+            <!--company 1-->
+            <div
+              class="bg-white px-[50px] drop-shadow-[0_0_32px_rgba(9,26,68,0.07)]"
+            >
+              <img src="./assets/netflix.svg" alt="netflix logo" />
+            </div>
+            <!--company 2-->
+            <div
+              class="bg-white px-[50px] flex items-center drop-shadow-[0_0_32px_rgba(9,26,68,0.07)]"
+            >
+              <img src="./assets/youtube.svg" alt="youtube logo" />
+            </div>
+            <!--company 3-->
+            <div
+              class="bg-white px-[50px] flex items-center drop-shadow-[0_0_32px_rgba(9,26,68,0.07)]"
+            >
+              <img src="./assets/google.svg" alt="google logo" />
+            </div>
+            <!--company 4-->
+            <div
+              class="bg-white px-[50px] flex items-center drop-shadow-[0_0_32px_rgba(9,26,68,0.07)]"
+            >
+              <img src="./assets/lenovo.svg" alt="lenovo logo" />
+            </div>
+            <!--company 5-->
+            <div
+              class="bg-white px-[50px] flex items-center drop-shadow-[0_0_32px_rgba(9,26,68,0.07)]"
+            >
+              <img src="./assets/slack.svg" alt="slack logo" />
+            </div>
+            <!--company 6-->
+            <div
+              class="bg-white px-[50px] flex items-center drop-shadow-[0_0_32px_rgba(9,26,68,0.07)]"
+            >
+              <img src="./assets/verizon.svg" alt="verizon logo" />
+            </div>
+            <!--company 7-->
+            <div
+              class="bg-white px-[50px] flex items-center drop-shadow-[0_0_32px_rgba(9,26,68,0.07)]"
+            >
+              <img src="./assets/lexmark.svg" alt="lexmark logo" />
+            </div>
+            <!--company 8-->
+            <div
+              class="bg-white px-[50px] flex items-center drop-shadow-[0_0_32px_rgba(9,26,68,0.07)]"
+            >
+              <img src="./assets/microsoft.svg" alt="microsoft logo" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-gray-900 border-b border-[#363B4780]">
+        <div
+          class="container py-25 flex gap-[136px] justify-between items-center"
+        >
+          <div class="max-w-[536px] space-y-8">
+            <h2 class="text-white font-semibold text-4xl tracking-[-1%]">
+              Start learning with 67.1k students around the world.
+            </h2>
+            <div class="space-x-4 flex gap-4">
+              <button class="btn btn-primary">Join the Family</button>
+              <button class="btn btn-gray">Browse all Courses</button>
+            </div>
+          </div>
+          <div class="grid grid-cols-3 gap-20">
+            <div class="space-y-3 max-w-[200px]">
+              <p class="text-white text-4xl font-semibold tracking-[-1%]">
+                6.3k
+              </p>
+              <p class="text-gray-300 font-medium leading-[22px]">
+                Online courses
+              </p>
+            </div>
+
+            <div class="space-y-3 max-w-[200px]">
+              <p class="text-white text-4xl font-semibold tracking-[-1%]">
+                26k
+              </p>
+              <p class="text-gray-300 font-medium leading-[22px]">
+                Certified Instructor
+              </p>
+            </div>
+
+            <div class="space-y-3 max-w-[200px]">
+              <p class="text-white text-4xl font-semibold tracking-[-1%]">
+                99.9%
+              </p>
+              <p class="text-gray-300 font-medium leading-[22px]">
+                Success Rate
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-gray-900">
+    <div class="border-b border-[#363B4780]">
+      <div class="container py-20 flex justify-between">
+        <div class="space-y-[26px] max-w-[287px]">
+          <div class="space-y-6">
+            <div class="flex gap-[9.2px] items-center">
+              <img src="./assets/GraduationCap.svg"/>
+              <a
+                class="text-white text-[37px] font-semibold tracking-[-3%] leading-[124%]"
+                href="./index.html"
+              >
+                E-tutor </a>
+            </div>
+            <p class="text-sm tracking-[-1%] leading-[22px] text-gray-500">
+              Aliquam rhoncus ligula est, non pulvinar elit convallis nec. Donec
+              mattis odio at.
+            </p>
+          </div>
+
+          <!--Social icons-->
+          <div class="grid grid-cols-5">
+            <div
+              class="w-[46px] h-[46px] bg-gray-800  flex justify-center items-center hover:bg-primary-500 hover:drop-shadow-[0_0_30px_rgba(204,82,43,0.5)]"
+            >
+              <a><img src="./assets/facebook.svg" alt="facebook logo" /></a>
+            </div>
+            <div
+              class="w-[46px] h-[46px] bg-gray-800  flex justify-center items-center hover:bg-primary-500 hover:drop-shadow-[0_0_30px_rgba(204,82,43,0.5)]"
+            >
+              <a><img src="./assets/Instragarm.svg" alt="instagram logo" /></a>
+            </div>
+            <div
+              class="w-[46px] h-[46px] bg-gray-800  flex justify-center items-center hover:bg-primary-500 hover:drop-shadow-[0_0_30px_rgba(204,82,43,0.5)]"
+            >
+              <a><img src="./assets/Linkedin.svg" alt="Linkedin logo" /></a>
+            </div>
+            <div
+              class="w-[46px] h-[46px] bg-gray-800  flex justify-center items-center hover:bg-primary-500 hover:drop-shadow-[0_0_30px_rgba(204,82,43,0.5)]"
+            >
+              <a><img src="./assets/Twitter.svg" alt="twitter logo" /></a>
+            </div>
+            <div
+              class="w-[46px] h-[46px] bg-gray-800  flex justify-center items-center hover:bg-primary-500 hover:drop-shadow-[0_0_30px_rgba(204,82,43,0.5)]"
+            >
+              <a href=""
+                ><img src="./assets/yticon.svg" alt="youtube logo"
+              /></a>
+            </div>
+          </div>
+        </div>
+
+        <!--Navigation links-->
+        <div class="grid grid-cols-4 gap-6">
+          <div class="space-y-6 max-w-[200px]">
+            <h3 class="text-sm uppercase font-medium text-white">
+              Top 4 Category
+            </h3>
+
+            <div>
+              <a
+                href="#"
+                class="group w-fit py-[6px] text-gray-500 text-sm leading-[22px] tracking-[-1%] hover:text-white hover:border-b-2 border-primary-500 flex items-center gap-3"
+              >
+                Development
+                <span
+                  class="opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  <img src="./assets/ArrowRightwhite.svg" />
+                </span>
+              </a>
+              <a
+                href="#"
+                class="group w-fit py-[6px] text-gray-500 text-sm leading-[22px] tracking-[-1%] hover:text-white hover:border-b-2 border-primary-500 flex items-center gap-3"
+              >
+                Finance & Accounting
+                <span
+                  class="opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  <img src="./assets/ArrowRightwhite.svg" />
+                </span>
+              </a>
+              <a
+                href="#"
+                class="group w-fit py-[6px] text-gray-500 text-sm leading-[22px] tracking-[-1%] hover:text-white hover:border-b-2 border-primary-500 flex items-center gap-3"
+              >
+                Design
+                <span
+                  class="opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  <img src="./assets/ArrowRightwhite.svg" />
+                </span>
+              </a>
+              <a
+                href="#"
+                class="group w-fit py-[6px] text-gray-500 text-sm leading-[22px] tracking-[-1%] hover:text-white hover:border-b-2 border-primary-500 flex items-center gap-3"
+              >
+                Business
+                <span
+                  class="opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  <img src="./assets/ArrowRightwhite.svg" />
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="space-y-6">
+            <h3 class="text-sm uppercase font-medium text-white">
+              Quick links
+            </h3>
+
+            <div>
+              <a
+                href="./about.html"
+                class="group w-fit py-[6px] text-gray-500 text-sm leading-[22px] tracking-[-1%] hover:text-white hover:border-b-2 border-primary-500 flex items-center gap-3"
+              >
+                About
+                <span
+                  class="opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  <img src="./assets/ArrowRightwhite.svg" />
+                </span>
+              </a>
+              <a
+                href="#"
+                class="group w-fit py-[6px] text-gray-500 text-sm leading-[22px] tracking-[-1%] hover:text-white hover:border-b-2 border-primary-500 flex items-center gap-3"
+              >
+                Become Instructor
+                <span
+                  class="opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  <img src="./assets/ArrowRightwhite.svg" />
+                </span>
+              </a>
+              <a
+                href="./contact.html"
+                class="group w-fit py-[6px] text-gray-500 text-sm leading-[22px] tracking-[-1%] hover:text-white hover:border-b-2 border-primary-500 flex items-center gap-3"
+              >
+                Contact
+                <span
+                  class="opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  <img src="./assets/ArrowRightwhite.svg" />
+                </span>
+              </a>
+              <a
+                href="#"
+                class="group w-fit py-[6px] text-gray-500 text-sm leading-[22px] tracking-[-1%] hover:text-white hover:border-b-2 border-primary-500 flex items-center gap-3"
+              >
+                Career
+                <span
+                  class="opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  <img src="./assets/ArrowRightwhite.svg" />
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="space-y-6">
+            <h3 class="text-sm uppercase font-medium text-white">support</h3>
+
+            <div>
+              <a
+                href="#"
+                class="group w-fit py-[6px] text-gray-500 text-sm leading-[22px] tracking-[-1%] hover:text-white hover:border-b-2 border-primary-500 flex items-center gap-3"
+              >
+                Help Center
+                <span
+                  class="opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  <img src="./assets/ArrowRightwhite.svg" />
+                </span>
+              </a>
+              <a
+                href="#"
+                class="group w-fit py-[6px] text-gray-500 text-sm leading-[22px] tracking-[-1%] hover:text-white hover:border-b-2 border-primary-500 flex items-center gap-3"
+              >
+                FAQs
+                <span
+                  class="opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  <img src="./assets/ArrowRightwhite.svg" />
+                </span>
+              </a>
+              <a
+                href="#"
+                class="group w-fit py-[6px] text-gray-500 text-sm leading-[22px] tracking-[-1%] hover:text-white hover:border-b-2 border-primary-500 flex items-center gap-3"
+              >
+                Terms & Conditions
+                <span
+                  class="opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  <img src="./assets/ArrowRightwhite.svg" />
+                </span>
+              </a>
+              <a
+                href="#"
+                class="group w-fit py-[6px] text-gray-500 text-sm leading-[22px] tracking-[-1%] hover:text-white hover:border-b-2 border-primary-500 flex items-center gap-3"
+              >
+                Privacy Policy
+                <span
+                  class="opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  <img src="./assets/ArrowRightwhite.svg" />
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="space-y-3">
+            <h3 class="text-sm uppercase font-medium text-white">
+              download our app
+            </h3>
+
+            <div
+              class="bg-gray-800  flex items-center justify-center gap-3 py-3 px-5"
+            >
+              <img src="./assets/apple.svg" />
+              <div>
+                <p class="text-gray-300 text-xxs">Download now</p>
+                <p class="text-white leading-[22px] font-medium">App Store</p>
+              </div>
+            </div>
+
+            <div
+              class="bg-gray-800  flex items-center justify-center gap-3 py-3 px-5"
+            >
+              <img src="./assets/googleplay.svg" />
+              <div>
+                <p class="text-gray-300 text-xxs">Download now</p>
+                <p class="text-white leading-[22px] font-medium">play Store</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <!--CopyRights-->
+      <div class="flex justify-between items-center">
+        <p
+          class="text-sm leading-[22px] tracking-[-1%] text-gray-500 py-[37px]"
+        >
+          © 2021 - Eduflex. Designed by
+          <span class="text-white">Templatecookie</span>. All rights reserved
+        </p>
+        <select
+          class="min-w-[200px] text-gray-500 border border-gray-800 px-[18px] py-3 my-[12px]"
+        >
+          <option>English</option>
+        </select>
+      </div>
+    </div>
+  </footer>
   </body>
 </html>

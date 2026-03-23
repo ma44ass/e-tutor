@@ -105,7 +105,7 @@
         --text-xxs-line-height: 12px;
       }
       .btn {
-        @apply px-8 font-semibold tracking-[-0.8%] leading-12 text-nowrap flex items-center gap-3;
+        @apply px-6 font-semibold tracking-[-0.8%] leading-12 text-nowrap flex items-center gap-3 cursor-pointer;
       }
 
       .btn-primary {
@@ -131,20 +131,6 @@
       .container {
         @apply max-w-[1320px] mx-auto px-6;
       }
-
-      .masked{
-      -webkit-mask-image: url('');
-      mask-image: url('');
-
-      -webkit-mask-repeat: no-repeat;
-      mask-repeat: no-repeat;
-
-      -webkit-mask-size: cover;
-      mask-size: cover;
-
-      -webkit-mask-position: center;
-      mask-position: center;
-}
     </style>
   </head>
 </html>
@@ -153,9 +139,9 @@
     <nav
       class="flex justify-between px-[32px] bg-gray-900 text-sm text-gray-500"
     >
-      <div class="flex items-center font-normal space-x-[24px]">
+      <div class="flex items-center   space-x-[24px]">
         <a
-          href="./home_final.html"
+          href="./index.html"
           class="px-[12px] py-[16px] transition-all hover:text-white hover:shadow-[inset_0px_2px_0px_0px_#ff6636]"
           style="box-shadow: 0px 2px 0px 0px #ff6636 inset"
         >
@@ -188,7 +174,7 @@
         </a>
       </div>
 
-      <div class="flex font-normal space-x-[24px] items-center">
+      <div class="flex  space-x-[24px] items-center">
         <div
           class="flex items-center gap-[6px] cursor-pointer hover:text-white"
         >
@@ -216,13 +202,13 @@
       <div class="flex items-center">
         <div class="flex items-center space-x-[8px] whitespace-nowrap">
           <img src="./assets/GraduationCap.svg" alt="logo" />
-          <a href="" class="text-3xl font-semibold text-gray-900">E-tutor</a>
+          <a href="./index.html" class="text-3xl font-semibold text-gray-900">E-tutor</a>
         </div>
         <div
           class="flex items-center ml-[50px] border border-gray-100 px-[16px] py-[12px] w-[200px] h-[48px] bg-white"
         >
           <select
-            class="appearance-none bg-transparent text-base font-normal text-gray-700 outline-none cursor-pointer pr-[12px] h-full"
+            class="appearance-none bg-transparent text-base   text-gray-700 outline-none cursor-pointer pr-[12px] h-full"
           >
             <option value="" selected>Browse</option>
             <option value="1">Development</option>
@@ -246,7 +232,7 @@
           <input
             type="text"
             placeholder="What do you want learn..."
-            class="flex-1 px-[12px] outline-none bg-transparent text-base font-normal text-gray-900 placeholder-gray-400 h-full"
+            class="flex-1 px-[12px] outline-none bg-transparent text-base   text-gray-900 placeholder-gray-400 h-full"
           />
         </div>
       </div>
@@ -286,7 +272,7 @@
     <h1 class="text-[20px] font-medium text-gray-900 mb-[6px]">About</h1>
 
     <p class="text-sm text-gray-500">
-      <a href="copy_final.html" class="hover:border-b-2 border-primary-500"
+      <a href="index.html" class="hover:border-b-2 border-primary-500"
       >Home</a
       >
       <span class="mx-1">/</span>
@@ -489,7 +475,7 @@
 
 
 <!-- Gallery section -->
-<section class="bg-[#F5F7FA] py-[80px]">
+<section class="bg-[#F5F7FA] pt-[80px]">
   <div class="container grid grid-cols-2 gap-16 items-center">
 
     <div class="">
@@ -507,8 +493,9 @@
         libero. Curabitur in urna ligula.  torquent per conubia nostra.
       </p>
 
-      <button class="bg-primary-500 text-white px-6 py-3 text-sm font-semibold flex items-center gap-2 hover:bg-primary-600 transition">
-        Join Our Team →
+      <button class=" btn btn-primary items-center gap-2 ">
+        Join Our Team 
+        <img src="/assets/ArrowRightwhite.svg" >
       </button>
     </div>
 
@@ -576,7 +563,7 @@
 
       <div class="mt-6">
         <p class="text-base font-medium text-gray-900 leading-[22px]">Sundar Pichai</p>
-        <p class="text-sm font-normal text-gray-600 tracking-[-1%]">
+        <p class="text-sm  text-gray-600 tracking-[-1%]">
           Chief Chairman of <span class="text-blue-500 font-medium leading-[20px]">Google</span>
         </p>
       </div>
@@ -603,7 +590,7 @@
 
       <div class="mt-6">
         <p class="text-base font-medium text-gray-900 leading-[22px]">Satya Nadella</p>
-        <p class="text-sm font-normal text-gray-600 tracking-[-1%]">
+        <p class="text-sm   text-gray-600 tracking-[-1%]">
           CEO of <span class="text-blue-500 font-medium leading-[20px]">Microsoft</span>
         </p>
       </div>
@@ -629,7 +616,7 @@
 
       <div class="mt-6">
         <p class="text-base font-medium text-gray-900 leading-[22px]">Ted Sarandos</p>
-        <p class="text-sm font-normal text-gray-600 tracking-[-1%]">
+        <p class="text-sm   text-gray-600 tracking-[-1%]">
           Chief Executive Officer of <span class="text-blue-500 font-medium leading-[20px]">Netflix</span>
         </p>
       </div>
@@ -641,17 +628,17 @@
 
               <!-- Footer -->
   <footer class="bg-gray-900">
-    <div class="border-b border-gray-500">
+    <div class="border-b border-[#363B4780]">
       <div class="container py-20 flex justify-between">
         <div class="space-y-[26px] max-w-[287px]">
           <div class="space-y-6">
             <div class="flex gap-[9.2px] items-center">
-              <img src="./assets/GraduationCap.svg" alt="" />
-              <p
+              <img src="./assets/GraduationCap.svg"/>
+              <a
                 class="text-white text-[37px] font-semibold tracking-[-3%] leading-[124%]"
+                href="./index.html"
               >
-                E-tutor
-              </p>
+                E-tutor </a>
             </div>
             <p class="text-sm tracking-[-1%] leading-[22px] text-gray-500">
               Aliquam rhoncus ligula est, non pulvinar elit convallis nec. Donec
@@ -662,27 +649,27 @@
           <!--Social icons-->
           <div class="grid grid-cols-5">
             <div
-              class="w-[46px] h-[46px] bg-[#363B47] flex justify-center items-center hover:bg-primary-500 hover:drop-shadow-[0_0_30px_rgba(204,82,43,0.5)]"
+              class="w-[46px] h-[46px] bg-gray-800  flex justify-center items-center hover:bg-primary-500 hover:drop-shadow-[0_0_30px_rgba(204,82,43,0.5)]"
             >
               <a><img src="./assets/facebook.svg" alt="facebook logo" /></a>
             </div>
             <div
-              class="w-[46px] h-[46px] bg-[#363B47] flex justify-center items-center hover:bg-primary-500 hover:drop-shadow-[0_0_30px_rgba(204,82,43,0.5)]"
+              class="w-[46px] h-[46px] bg-gray-800  flex justify-center items-center hover:bg-primary-500 hover:drop-shadow-[0_0_30px_rgba(204,82,43,0.5)]"
             >
               <a><img src="./assets/Instragarm.svg" alt="instagram logo" /></a>
             </div>
             <div
-              class="w-[46px] h-[46px] bg-[#363B47] flex justify-center items-center hover:bg-primary-500 hover:drop-shadow-[0_0_30px_rgba(204,82,43,0.5)]"
+              class="w-[46px] h-[46px] bg-gray-800  flex justify-center items-center hover:bg-primary-500 hover:drop-shadow-[0_0_30px_rgba(204,82,43,0.5)]"
             >
               <a><img src="./assets/Linkedin.svg" alt="Linkedin logo" /></a>
             </div>
             <div
-              class="w-[46px] h-[46px] bg-[#363B47] flex justify-center items-center hover:bg-primary-500 hover:drop-shadow-[0_0_30px_rgba(204,82,43,0.5)]"
+              class="w-[46px] h-[46px] bg-gray-800  flex justify-center items-center hover:bg-primary-500 hover:drop-shadow-[0_0_30px_rgba(204,82,43,0.5)]"
             >
               <a><img src="./assets/Twitter.svg" alt="twitter logo" /></a>
             </div>
             <div
-              class="w-[46px] h-[46px] bg-[#363B47] flex justify-center items-center hover:bg-primary-500 hover:drop-shadow-[0_0_30px_rgba(204,82,43,0.5)]"
+              class="w-[46px] h-[46px] bg-gray-800  flex justify-center items-center hover:bg-primary-500 hover:drop-shadow-[0_0_30px_rgba(204,82,43,0.5)]"
             >
               <a href=""
                 ><img src="./assets/yticon.svg" alt="youtube logo"
@@ -853,7 +840,7 @@
             </h3>
 
             <div
-              class="bg-[#363B47] flex items-center justify-center gap-3 py-3 px-5"
+              class="bg-gray-800  flex items-center justify-center gap-3 py-3 px-5"
             >
               <img src="./assets/apple.svg" />
               <div>
@@ -863,7 +850,7 @@
             </div>
 
             <div
-              class="bg-[#363B47] flex items-center justify-center gap-3 py-3 px-5"
+              class="bg-gray-800  flex items-center justify-center gap-3 py-3 px-5"
             >
               <img src="./assets/googleplay.svg" />
               <div>
