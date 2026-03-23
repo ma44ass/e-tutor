@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        /* Colors */
+        --color-gray-900: #1d2026;
+        --color-gray-800: #363b47;
+        --color-gray-700: #4e5566;
+        --color-gray-600: #6e7485;
+        --color-gray-500: #8c94a3;
+        --color-gray-400: #a1a5b3;
+        --color-gray-300: #b7bac7;
+        --color-gray-200: #ced1d9;
+        --color-gray-100: #e9eaf0;
+        --color-gray-50: #f5f7fa;
+        --color-white: #ffffff;
+
+        --color-primary-900: #33140b;
+        --color-primary-800: #662916;
+        --color-primary-700: #993d20;
+        --color-primary-600: #cc522b;
+        --color-primary-500: #ff6636;
+        --color-primary-400: #ff855e;
+        --color-primary-300: #ffa386;
+        --color-primary-200: #ffddd1;
+        --color-primary-100: #ffeee8;
+
+        --color-secondary-900: #111033;
+        --color-secondary-800: #222065;
+        --color-secondary-700: #342f98;
+        --color-secondary-600: #453fca;
+        --color-secondary-500: #564ffd;
+        --color-secondary-400: #7872fd;
+        --color-secondary-300: #9a95fe;
+        --color-secondary-200: #cdcbfe;
+        --color-secondary-100: #ebebff;
+
+        --color-sucess-900: #07260a;
+        --color-sucess-800: #0e4c14;
+        --color-sucess-700: #15711f;
+        --color-sucess-600: #1c9729;
+        --color-sucess-500: #23bd33;
+        --color-sucess-400: #4fca5c;
+        --color-sucess-300: #7bd785;
+        --color-sucess-200: #c3e5c6;
+        --color-sucess-100: #e1f7e3;
+
+        --color-warning-900: #331d06;
+        --color-warning-800: #65390c;
+        --color-warning-700: #985613;
+        --color-warning-600: #cc7319;
+        --color-warning-500: #fd8e1f;
+        --color-warning-400: #fda44c;
+        --color-warning-300: #febb79;
+        --color-warning-200: #fed1a5;
+        --color-warning-100: #fff2e5;
+
+        --color-danger-900: #2d0e0e;
+        --color-danger-800: #5b1b1b;
+        --color-danger-700: #882929;
+        --color-danger-600: #b63636;
+        --color-danger-500: #e34444;
+        --color-danger-400: #e96969;
+        --color-danger-300: #ee8f8f;
+        --color-danger-200: #f4c8c8;
+        --color-danger-100: #fff0f0;
+
+        /* font */
+        --font-inter: "Inter", sans-serif;
+        /* text size */
+        --text-8xl: 80px;
+        --text-8xl-line-height: 80px;
+        --text-7xl: 72px;
+        --text-7xl-line-height: 74px;
+        --text-6xl: 64px;
+        --text-6xl-line-height: 68px;
+        --text-5xl: 48px;
+        --text-5xl-line-height: 52px;
+        --text-4xl: 40px;
+        --text-4xl-line-height: 48px;
+        --text-3xl: 32px;
+        --text-3xl-line-height: 40px;
+        --text-2xl: 24px;
+        --text-2xl-line-height: 32px;
+        --text-lg: 18px;
+        --text-lg-line-height: 100%;
+        --text-base: 16px;
+        --text-base-line-height: 100%;
+        --text-sm: 14px;
+        --text-sm-line-height: 100%;
+        --text-xs: 12px;
+        --text-xs-line-height: 12px;
+        --text-xxs: 10px;
+        --text-xxs-line-height: 12px;
+      }
+      .btn {
+        @apply px-8 font-semibold tracking-[-0.8%] leading-12 text-nowrap flex items-center gap-3 cursor-pointer;
+      }
+
+      .btn-primary {
+        @apply bg-primary-500 text-white hover:bg-primary-600 hover:drop-shadow-[0_0_20px_rgba(204,82,43,0.5)];
+      }
+
+      .btn-secondary {
+        @apply bg-primary-100 text-primary-500 hover:bg-primary-200 hover:text-primary-600;
+      }
+
+      .btn-gray {
+        @apply bg-gray-800 text-white;
+      }
+
+      .btn-tertiary {
+        @apply bg-white text-primary-500 hover:bg-primary-100 text-primary-600;
+      }
+
+      .btn-simple {
+        @apply text-primary-500 text-left hover:border-b-2 border-primary-500 px-0;
+      }
+
+      .container {
+        @apply max-w-[1320px] mx-auto px-6;
+      }
+    </style>
+  </head>
+  <body>
+    <div class=" py-20 container items-center grid grid-cols-2 h-[724px]">
+      <div class="grid grid-cols-12 gap-y-4 gap-x-6">
+            <!--row 1-->
+        <div class=" pt-[32px] col-span-3 col-start-2 flex">
+          <img
+            src="./assets/About-ModernOffice.png"
+            class="w-full object-cover" />
+        </div>
+
+        <div class="col-span-4 flex">
+             <img
+          src="./assets/About-Covid-workers.png"
+          class="object-cover w-full "
+        />
+        </div>
+
+        <div class=" col-span-2 pt-8">
+            <img
+          src="./assets/About-VideocallWork.png"
+          class="w-full h-full object-cover"
+        />
+        </div>
+
+        <!--row 2-->
+
+        <div class ="col-span-3 row-span-2">
+            <img
+          src="./assets/About-FinancialGraphs.png"
+          class="w-full object-cover"
+        />
+        </div>
+        
+        <div class="col-span-6 row-span-3">
+            <img
+          src="./assets/About-BusinessMeeting.png"
+          class="h-full object-fit"
+        />
+
+        </div>
+        
+        <div class="col-span-3">
+            <img
+          src="./assets/About-OfficeWorkingLaptop.png"
+          class="w-full h-full object-cover"
+        />
+
+        </div>
+        
+        <div class="col-start-10 row-span-2 col-span-2">
+            <img
+          src="./assets/About-LessonsOnline.png"
+          class="w-full h-full object-cover"
+        />
+
+        </div>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
