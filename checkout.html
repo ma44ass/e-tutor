@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>E-tutor</title>
+    <style type="text/tailwindcss">
+      @theme {
+        /* Colors */
+        --color-gray-900: #1d2026;
+        --color-gray-800: #363b47;
+        --color-gray-700: #4e5566;
+        --color-gray-600: #6e7485;
+        --color-gray-500: #8c94a3;
+        --color-gray-400: #a1a5b3;
+        --color-gray-300: #b7bac7;
+        --color-gray-200: #ced1d9;
+        --color-gray-100: #e9eaf0;
+        --color-gray-50: #f5f7fa;
+        --color-white: #ffffff;
+
+        --color-primary-900: #33140b;
+        --color-primary-800: #662916;
+        --color-primary-700: #993d20;
+        --color-primary-600: #cc522b;
+        --color-primary-500: #ff6636;
+        --color-primary-400: #ff855e;
+        --color-primary-300: #ffa386;
+        --color-primary-200: #ffddd1;
+        --color-primary-100: #ffeee8;
+
+        --color-secondary-900: #111033;
+        --color-secondary-800: #222065;
+        --color-secondary-700: #342f98;
+        --color-secondary-600: #453fca;
+        --color-secondary-500: #564ffd;
+        --color-secondary-400: #7872fd;
+        --color-secondary-300: #9a95fe;
+        --color-secondary-200: #cdcbfe;
+        --color-secondary-100: #ebebff;
+
+        --color-sucess-900: #07260a;
+        --color-sucess-800: #0e4c14;
+        --color-sucess-700: #15711f;
+        --color-sucess-600: #1c9729;
+        --color-sucess-500: #23bd33;
+        --color-sucess-400: #4fca5c;
+        --color-sucess-300: #7bd785;
+        --color-sucess-200: #c3e5c6;
+        --color-sucess-100: #e1f7e3;
+
+        --color-warning-900: #331d06;
+        --color-warning-800: #65390c;
+        --color-warning-700: #985613;
+        --color-warning-600: #cc7319;
+        --color-warning-500: #fd8e1f;
+        --color-warning-400: #fda44c;
+        --color-warning-300: #febb79;
+        --color-warning-200: #fed1a5;
+        --color-warning-100: #fff2e5;
+
+        --color-danger-900: #2d0e0e;
+        --color-danger-800: #5b1b1b;
+        --color-danger-700: #882929;
+        --color-danger-600: #b63636;
+        --color-danger-500: #e34444;
+        --color-danger-400: #e96969;
+        --color-danger-300: #ee8f8f;
+        --color-danger-200: #f4c8c8;
+        --color-danger-100: #fff0f0;
+
+        /* font */
+        --font-inter: "Inter", sans-serif;
+        /* text size */
+        --text-8xl: 80px;
+        --text-8xl-line-height: 80px;
+        --text-7xl: 72px;
+        --text-7xl-line-height: 74px;
+        --text-6xl: 64px;
+        --text-6xl-line-height: 68px;
+        --text-5xl: 48px;
+        --text-5xl-line-height: 52px;
+        --text-4xl: 40px;
+        --text-4xl-line-height: 48px;
+        --text-3xl: 32px;
+        --text-3xl-line-height: 40px;
+        --text-2xl: 24px;
+        --text-2xl-line-height: 32px;
+        --text-lg: 18px;
+        --text-lg-line-height: 100%;
+        --text-base: 16px;
+        --text-base-line-height: 100%;
+        --text-sm: 14px;
+        --text-sm-line-height: 100%;
+        --text-xs: 12px;
+        --text-xs-line-height: 12px;
+        --text-xxs: 10px;
+        --text-xxs-line-height: 12px;
+      }
+      .btn {
+        @apply px-6 font-semibold tracking-[-0.8%] leading-12 text-nowrap flex items-center gap-3 cursor-pointer;
+      }
+
+      .btn-primary {
+        @apply bg-primary-500 text-white hover:bg-primary-600 hover:drop-shadow-[0_0_20px_rgba(204,82,43,0.5)];
+      }
+
+      .btn-secondary {
+        @apply bg-primary-100 text-primary-500 hover:bg-primary-200 hover:text-primary-600;
+      }
+
+      .btn-gray {
+        @apply bg-gray-800 text-white;
+      }
+
+      .btn-tertiary {
+        @apply bg-white text-primary-500 hover:bg-primary-100 text-primary-600;
+      }
+
+      .btn-simple {
+        @apply text-primary-500 text-left hover:border-b-2 border-primary-500 px-0;
+      }
+
+      .container {
+        @apply max-w-[1320px] mx-auto px-6;
+      }
+    </style>
+  </head>
+  <body class="font-inter">
+    <header>
+      <nav
+        class="flex justify-between px-[32px] bg-gray-900 text-sm text-gray-500"
+      >
+        <div class="flex items-center font-normal space-x-[24px]">
+          <a
+            href="./index.html"
+            class="px-[12px] py-[16px] transition-all hover:text-white hover:shadow-[inset_0px_2px_0px_0px_#ff6636]"
+            style="box-shadow: 0px 2px 0px 0px #ff6636 inset"
+          >
+            Home
+          </a>
+
+          <a
+            href="./courses.html"
+            class="px-[12px] py-[16px] transition-all hover:text-white hover:shadow-[inset_0px_2px_0px_0px_#ff6636]"
+          >
+            Courses
+          </a>
+          <a
+            href="./about.html"
+            class="px-[12px] py-[16px] transition-all hover:text-white hover:shadow-[inset_0px_2px_0px_0px_#ff6636]"
+          >
+            About
+          </a>
+          <a
+            href="./contact.html"
+            class="px-[12px] py-[16px] transition-all hover:text-white hover:shadow-[inset_0px_2px_0px_0px_#ff6636]"
+          >
+            Contact
+          </a>
+          <a
+            href=""
+            class="px-[12px] py-[16px] transition-all hover:text-white hover:shadow-[inset_0px_2px_0px_0px_#ff6636]"
+          >
+            Become an Instructor
+          </a>
+        </div>
+
+        <div class="flex font-normal space-x-[24px] items-center">
+          <div
+            class="flex items-center gap-[6px] cursor-pointer hover:text-white"
+          >
+            <span>USD</span>
+            <img
+              src="./assets/chevronDown.png"
+              alt=""
+              class="w-[12px] h-[12px]"
+            />
+          </div>
+          <div
+            class="flex items-center gap-[6px] cursor-pointer hover:text-white"
+          >
+            <span>English</span>
+            <img
+              src="./assets/chevronDown.png"
+              alt=""
+              class="w-[12px] h-[12px]"
+            />
+          </div>
+        </div>
+      </nav>
+
+      <div class="flex justify-between px-[32px] py-[24px] bg-white">
+        <div class="flex items-center">
+          <div class="flex items-center space-x-[8px] whitespace-nowrap">
+            <img src="./assets/GraduationCap.svg" alt="logo" />
+            <a href="./index.html" class="text-3xl font-semibold text-gray-900">E-tutor</a>
+          </div>
+          <div
+            class="flex items-center ml-[50px] border border-gray-100 px-[16px] py-[12px] w-[200px] h-[48px] bg-white"
+          >
+            <select
+              class="appearance-none bg-transparent text-base font-normal text-gray-700 outline-none cursor-pointer pr-[12px] h-full"
+            >
+              <option value="" selected>Browse</option>
+              <option value="1">Development</option>
+              <option value="2">Business</option>
+            </select>
+            <img
+              src="./assets/dropdow-icon.png"
+              alt="dropdow-icon"
+              class="cursor-pointer pl-[45px]"
+            />
+          </div>
+
+          <div
+            class="flex items-center px-[16px] w-[400px] h-full border border-gray-100 ml-[16px]"
+          >
+            <img
+              src="./assets/MagnifyingGlass.png"
+              alt="search"
+              class="w-[25px] h-[25px] shrink-0"
+            />
+            <input
+              type="text"
+              placeholder="What do you want learn..."
+              class="flex-1 px-[12px] outline-none bg-transparent text-base font-normal text-gray-900 placeholder-gray-400 h-full"
+            />
+          </div>
+        </div>
+
+        <div class="flex space-x-[24px] items-center">
+          <div>
+            <img
+              src="./assets/Bell.svg"
+              alt="bell-icon"
+              class="cursor-pointer"
+            />
+          </div>
+          <div>
+            <img
+              src="./assets/Heart.svg"
+              alt="heart-icon"
+              class="cursor-pointer"
+            />
+          </div>
+          <div>
+            <img
+              src="./assets/ShoppingCartSimple.svg"
+              alt="cart-icon"
+              class="cursor-pointer"
+            />
+          </div>
+
+          <div class="flex gap-[8px]">
+            <button class="btn btn-secondary text-primary-500">
+              Create Account
+            </button>
+            <button class="btn btn-primary">Sign in</button>
+          </div>
+        </div>
+      </div>
+    </header>
+     <footer class="bg-gray-900">
+    <div class="border-b border-[#363B4780]">
+      <div class="container py-20 flex justify-between">
+        <div class="space-y-[26px] max-w-[287px]">
+          <div class="space-y-6">
+            <div class="flex gap-[9.2px] items-center">
+              <img src="./assets/GraduationCap.svg"/>
+              <a
+                class="text-white text-[37px] font-semibold tracking-[-3%] leading-[124%]"
+                href="./index.html"
+              >
+                E-tutor </a>
+            </div>
+            <p class="text-sm tracking-[-1%] leading-[22px] text-gray-500">
+              Aliquam rhoncus ligula est, non pulvinar elit convallis nec. Donec
+              mattis odio at.
+            </p>
+          </div>
+
+          <!--Social icons-->
+          <div class="grid grid-cols-5">
+            <div
+              class="w-[46px] h-[46px] bg-gray-800  flex justify-center items-center hover:bg-primary-500 hover:drop-shadow-[0_0_30px_rgba(204,82,43,0.5)]"
+            >
+              <a><img src="./assets/facebook.svg" alt="facebook logo" /></a>
+            </div>
+            <div
+              class="w-[46px] h-[46px] bg-gray-800  flex justify-center items-center hover:bg-primary-500 hover:drop-shadow-[0_0_30px_rgba(204,82,43,0.5)]"
+            >
+              <a><img src="./assets/Instragarm.svg" alt="instagram logo" /></a>
+            </div>
+            <div
+              class="w-[46px] h-[46px] bg-gray-800  flex justify-center items-center hover:bg-primary-500 hover:drop-shadow-[0_0_30px_rgba(204,82,43,0.5)]"
+            >
+              <a><img src="./assets/Linkedin.svg" alt="Linkedin logo" /></a>
+            </div>
+            <div
+              class="w-[46px] h-[46px] bg-gray-800  flex justify-center items-center hover:bg-primary-500 hover:drop-shadow-[0_0_30px_rgba(204,82,43,0.5)]"
+            >
+              <a><img src="./assets/Twitter.svg" alt="twitter logo" /></a>
+            </div>
+            <div
+              class="w-[46px] h-[46px] bg-gray-800  flex justify-center items-center hover:bg-primary-500 hover:drop-shadow-[0_0_30px_rgba(204,82,43,0.5)]"
+            >
+              <a href=""
+                ><img src="./assets/yticon.svg" alt="youtube logo"
+              /></a>
+            </div>
+          </div>
+        </div>
+
+        <!--Navigation links-->
+        <div class="grid grid-cols-4 gap-6">
+          <div class="space-y-6 max-w-[200px]">
+            <h3 class="text-sm uppercase font-medium text-white">
+              Top 4 Category
+            </h3>
+
+            <div>
+              <a
+                href="#"
+                class="group w-fit py-[6px] text-gray-500 text-sm leading-[22px] tracking-[-1%] hover:text-white hover:border-b-2 border-primary-500 flex items-center gap-3"
+              >
+                Development
+                <span
+                  class="opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  <img src="./assets/ArrowRightwhite.svg" />
+                </span>
+              </a>
+              <a
+                href="#"
+                class="group w-fit py-[6px] text-gray-500 text-sm leading-[22px] tracking-[-1%] hover:text-white hover:border-b-2 border-primary-500 flex items-center gap-3"
+              >
+                Finance & Accounting
+                <span
+                  class="opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  <img src="./assets/ArrowRightwhite.svg" />
+                </span>
+              </a>
+              <a
+                href="#"
+                class="group w-fit py-[6px] text-gray-500 text-sm leading-[22px] tracking-[-1%] hover:text-white hover:border-b-2 border-primary-500 flex items-center gap-3"
+              >
+                Design
+                <span
+                  class="opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  <img src="./assets/ArrowRightwhite.svg" />
+                </span>
+              </a>
+              <a
+                href="#"
+                class="group w-fit py-[6px] text-gray-500 text-sm leading-[22px] tracking-[-1%] hover:text-white hover:border-b-2 border-primary-500 flex items-center gap-3"
+              >
+                Business
+                <span
+                  class="opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  <img src="./assets/ArrowRightwhite.svg" />
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="space-y-6">
+            <h3 class="text-sm uppercase font-medium text-white">
+              Quick links
+            </h3>
+
+            <div>
+              <a
+                href="./about.html"
+                class="group w-fit py-[6px] text-gray-500 text-sm leading-[22px] tracking-[-1%] hover:text-white hover:border-b-2 border-primary-500 flex items-center gap-3"
+              >
+                About
+                <span
+                  class="opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  <img src="./assets/ArrowRightwhite.svg" />
+                </span>
+              </a>
+              <a
+                href="#"
+                class="group w-fit py-[6px] text-gray-500 text-sm leading-[22px] tracking-[-1%] hover:text-white hover:border-b-2 border-primary-500 flex items-center gap-3"
+              >
+                Become Instructor
+                <span
+                  class="opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  <img src="./assets/ArrowRightwhite.svg" />
+                </span>
+              </a>
+              <a
+                href="./contact.html"
+                class="group w-fit py-[6px] text-gray-500 text-sm leading-[22px] tracking-[-1%] hover:text-white hover:border-b-2 border-primary-500 flex items-center gap-3"
+              >
+                Contact
+                <span
+                  class="opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  <img src="./assets/ArrowRightwhite.svg" />
+                </span>
+              </a>
+              <a
+                href="#"
+                class="group w-fit py-[6px] text-gray-500 text-sm leading-[22px] tracking-[-1%] hover:text-white hover:border-b-2 border-primary-500 flex items-center gap-3"
+              >
+                Career
+                <span
+                  class="opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  <img src="./assets/ArrowRightwhite.svg" />
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="space-y-6">
+            <h3 class="text-sm uppercase font-medium text-white">support</h3>
+
+            <div>
+              <a
+                href="#"
+                class="group w-fit py-[6px] text-gray-500 text-sm leading-[22px] tracking-[-1%] hover:text-white hover:border-b-2 border-primary-500 flex items-center gap-3"
+              >
+                Help Center
+                <span
+                  class="opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  <img src="./assets/ArrowRightwhite.svg" />
+                </span>
+              </a>
+              <a
+                href="#"
+                class="group w-fit py-[6px] text-gray-500 text-sm leading-[22px] tracking-[-1%] hover:text-white hover:border-b-2 border-primary-500 flex items-center gap-3"
+              >
+                FAQs
+                <span
+                  class="opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  <img src="./assets/ArrowRightwhite.svg" />
+                </span>
+              </a>
+              <a
+                href="#"
+                class="group w-fit py-[6px] text-gray-500 text-sm leading-[22px] tracking-[-1%] hover:text-white hover:border-b-2 border-primary-500 flex items-center gap-3"
+              >
+                Terms & Conditions
+                <span
+                  class="opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  <img src="./assets/ArrowRightwhite.svg" />
+                </span>
+              </a>
+              <a
+                href="#"
+                class="group w-fit py-[6px] text-gray-500 text-sm leading-[22px] tracking-[-1%] hover:text-white hover:border-b-2 border-primary-500 flex items-center gap-3"
+              >
+                Privacy Policy
+                <span
+                  class="opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  <img src="./assets/ArrowRightwhite.svg" />
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="space-y-3">
+            <h3 class="text-sm uppercase font-medium text-white">
+              download our app
+            </h3>
+
+            <div
+              class="bg-gray-800  flex items-center justify-center gap-3 py-3 px-5"
+            >
+              <img src="./assets/apple.svg" />
+              <div>
+                <p class="text-gray-300 text-xxs">Download now</p>
+                <p class="text-white leading-[22px] font-medium">App Store</p>
+              </div>
+            </div>
+
+            <div
+              class="bg-gray-800  flex items-center justify-center gap-3 py-3 px-5"
+            >
+              <img src="./assets/googleplay.svg" />
+              <div>
+                <p class="text-gray-300 text-xxs">Download now</p>
+                <p class="text-white leading-[22px] font-medium">play Store</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <!--CopyRights-->
+      <div class="flex justify-between items-center">
+        <p
+          class="text-sm leading-[22px] tracking-[-1%] text-gray-500 py-[37px]"
+        >
+          © 2021 - Eduflex. Designed by
+          <span class="text-white">Templatecookie</span>. All rights reserved
+        </p>
+        <select
+          class="min-w-[200px] text-gray-500 border border-gray-800 px-[18px] py-3 my-[12px]"
+        >
+          <option>English</option>
+        </select>
+      </div>
+    </div>
+  </footer>
+    </body>
+    </html>
