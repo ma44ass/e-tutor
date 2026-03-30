@@ -105,7 +105,7 @@
         --text-xxs-line-height: 12px;
       }
       .btn {
-        @apply px-6 font-semibold tracking-[-0.8%] leading-12 text-nowrap flex items-center gap-3 cursor-pointer;
+        @apply px-6 font-semibold tracking-[-0.8%] leading-12 text-nowrap gap-3 cursor-pointer;
       }
 
       .btn-primary {
@@ -282,9 +282,9 @@
       </div>
 
       <section
-        class="flex justify-center gap-[136px] mx-auto py-20 text-gray-900"
+        class=" container flex gap-[136px] py-20 justify-between  items-start text-gray-900"
       >
-        <form class="max-w-[648px] space-y-10">
+        <form class="space-y-10 flex-1">
           <p class="font-semibold text-3xl mb-10 tracking-[-1%]">Gift course</p>
           <fieldset class="flex flex-col gap-[18px]">
             <legend class="font-medium text-lg mb-6">
@@ -395,8 +395,14 @@
                   <label for="name" class="block text-sm tracking-[-1%]">
                     Card Number</label
                   >
-                  <div class="flex items-center border border-gray-100 pl-[18px]">
-                    <img src="./assets/CreditCard.svg" alt="Card Icon" class="w-5 h-5">
+                  <div
+                    class="flex items-center border border-gray-100 pl-[18px]"
+                  >
+                    <img
+                      src="./assets/CreditCard.svg"
+                      alt="Card Icon"
+                      class="w-5 h-5"
+                    />
                     <div class="w-[1px] h-[32px] bg-gray-100 mx-3"></div>
                     <input
                       type="number"
@@ -437,6 +443,7 @@
               </div>
             </div>
           </fieldset>
+          <!--Checkbox-->
           <div class="flex gap-[10px]">
             <input
               type="checkbox"
@@ -451,6 +458,55 @@
             >
           </div>
         </form>
+
+        <!----Checkout div here -->
+        <div class="border border-gray-100 pt-6 h-fit w-[536px] shrink-0">
+          <div class="px-6 border-b border-gray-100 space-y-4 pb-6">
+            <p class="font-medium text-lg">Course</p>
+            <div class="flex gap-3">
+              <img
+                src="./assets/Health.png"
+                alt="man working on his computer"
+                class="w-[100px]"
+              />
+              <div class="space-y-[5px] text-xs flex flex-col justify-between">
+                <div class="space-y-[5px]">
+                  <p class="text-gray-700">
+                    <span class="text-gray-400">Course by:</span> Courtney Henry
+                  </p>
+                  <p class="text-xs text-gray-900 tracking-[-1%]">
+                    Graphic Design Masterclass - Learn GREAT Design
+                  </p>
+                </div>
+                <p class="text-primary-500 font-medium tracking-[-1%] mt-[7px]">
+                  $13.00
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="px-6 py-6 flex flex-col">
+              <div class="border-b border-gray-100 space-y-4 pb-4">
+                <p class="text-lg text-gray-900 font-medium">Order Summery</p>
+                <div class="flex justify-between text-sm tracking-[-1%]">
+                  <p class="text-gray-600 ">Subtotal</p>
+                  <p class="text-gray-900 font-medium">$61.97 USD</p>
+                </div>
+
+                <div class="flex justify-between text-sm tracking-[-1%]">
+                  <p class="text-gray-600 ">Coupon Discount</p>
+                  <p class="text-gray-900 font-medium">8%</p>
+                </div>
+              </div>
+
+               <div class="flex items-center justify-between pt-5 text-[#202029]">
+                  <p>Total:</p>
+                  <p class="text-2xl font-semibold tracking-[-1%]">$75.00 USD</p>
+                </div>
+
+                <button class="btn btn-primary text-center mt-6">Complete Payment</button>
+
+            </div>
+        </div>
       </section>
     </main>
     <footer class="bg-gray-900">
