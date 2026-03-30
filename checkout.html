@@ -331,8 +331,9 @@
             </div>
           </fieldset>
 
+          <!--Payment method-->
           <fieldset>
-            <legend class="font-medium text-lg mb-6"> Payment Method</legend>
+            <legend class="font-medium text-lg mb-6">Payment Method</legend>
             <div class="space-y-[16px]">
               <div
                 class="text-gray-700 text-sm flex items-center gap-6 border border-gray-100 px-6 py-[10px]"
@@ -366,7 +367,7 @@
               </div>
 
               <div
-                class="text-gray-700 text-sm flex justify-between border border-gray-100 px-6 py-[10px]"
+                class="text-gray-700 text-sm flex justify-between border border-sucess-500 px-6 py-[10px]"
               >
                 <div class="flex gap-6 items-center">
                   <img src="./assets/CreditCard.svg" alt="" />
@@ -375,8 +376,80 @@
 
                 <img src="./assets/CheckCircle.svg" />
               </div>
+
+              <!---Cards Info--->
+              <div class="space-y-4">
+                <div class="space-y-[6px]">
+                  <label for="name" class="block text-sm tracking-[-1%]">
+                    Name</label
+                  >
+                  <input
+                    type="text"
+                    placeholder="Name on card"
+                    id="name"
+                    name="Card Name"
+                    class="border border-gray-100 pl-[18px] py-[11px] w-full"
+                  />
+                </div>
+                <div class="space-y-[6px]">
+                  <label for="name" class="block text-sm tracking-[-1%]">
+                    Card Number</label
+                  >
+                  <div class="flex items-center border border-gray-100 pl-[18px]">
+                    <img src="./assets/CreditCard.svg" alt="Card Icon" class="w-5 h-5">
+                    <div class="w-[1px] h-[32px] bg-gray-100 mx-3"></div>
+                    <input
+                      type="number"
+                      placeholder="Label"
+                      id="name"
+                      name="Card Name"
+                      class="py-[11px] w-full [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                    />
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-[18px]">
+                  <div class="space-y-[6px]">
+                    <label for="name" class="block text-sm tracking-[-1%]">
+                      MM / YY</label
+                    >
+                    <input
+                      type="text"
+                      placeholder="MM / YY"
+                      id="cardDate"
+                      name="CardDate"
+                      class="border border-gray-100 pl-[18px] py-[11px] w-full"
+                    />
+                  </div>
+                  <div class="space-y-[6px]">
+                    <label for="name" class="block text-sm tracking-[-1%]">
+                      CVC</label
+                    >
+                    <input
+                      type="number"
+                      placeholder="Security Code"
+                      id="cvc"
+                      name="security Code"
+                      class="border border-gray-100 pl-[18px] py-[11px] w-full [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </fieldset>
+          <div class="flex gap-[10px]">
+            <input
+              type="checkbox"
+              id="remember-card"
+              class="peer h-[22px] w-[22px] cursor-pointer appearance-none border border-gray-300 bg-white checked:bg-primary-500 checked:border-primary-500 relative after:content-[''] after:absolute after:opacity-0 checked:after:opacity-100 after:left-[35%] after:bottom-[30%] after:w-[6px] after:h-[10px] after:border-white after:border-b-[2px] after:border-r-[2px] after:rotate-45"
+            />
+            <label
+              for="remember-card"
+              class="text-gray-700 text-sm tracking-[-1%]"
+            >
+              Remember this card, save it on my card list</label
+            >
+          </div>
         </form>
       </section>
     </main>
