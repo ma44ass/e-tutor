@@ -1,6 +1,15 @@
-let courseCard = document.getElementById("courseCard");
+//hover card
 let courseCardDetails = document.getElementById("courseCardDetails");
 
+//Cart
+let itemsInCart = 0;
+let cartNotification = document.getElementById("cartNoti");
+let navCartIcon = document.getElementById("navCart");
+
+let addToCartBtn = document.getElementById("addToCartbtn")
+
+
+//hover Card:
 let courseData = [
     {
         title: "The python mega course",
@@ -68,5 +77,16 @@ document.querySelectorAll('.courseCard').forEach((card, index) => {
         courseCardDetails.classList.add('hidden');
    
 });
+})
+
+
+//Cart 
+addToCartBtn.addEventListener('click', ()=> {
+    itemsInCart++;
+    cartNotification.innerText = itemsInCart;
+
+    if(itemsInCart > 0){
+        cartNotification.classList.remove('hidden')
+    }
 })
 

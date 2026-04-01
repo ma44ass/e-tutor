@@ -138,6 +138,149 @@
     </style>
   </head>
   <body class="font-inter">
+    <header>
+      <nav
+        class="flex justify-between px-[32px] bg-gray-900 text-sm text-gray-500"
+      >
+        <div class="flex items-center font-normal space-x-[24px]">
+          <a
+            href="./index.html"
+            class="px-[12px] py-[16px] transition-all hover:text-white hover:shadow-[inset_0px_2px_0px_0px_#ff6636]"
+            style="box-shadow: 0px 2px 0px 0px #ff6636 inset"
+          >
+            Home
+          </a>
+
+          <a
+            href="./courses.html"
+            class="px-[12px] py-[16px] transition-all hover:text-white hover:shadow-[inset_0px_2px_0px_0px_#ff6636]"
+          >
+            Courses
+          </a>
+          <a
+            href="./about.html"
+            class="px-[12px] py-[16px] transition-all hover:text-white hover:shadow-[inset_0px_2px_0px_0px_#ff6636]"
+          >
+            About
+          </a>
+          <a
+            href="./contact.html"
+            class="px-[12px] py-[16px] transition-all hover:text-white hover:shadow-[inset_0px_2px_0px_0px_#ff6636]"
+          >
+            Contact
+          </a>
+          <a
+            href="./checkout.html"
+            class="px-[12px] py-[16px] transition-all hover:text-white hover:shadow-[inset_0px_2px_0px_0px_#ff6636]"
+          >
+            Become an Instructor
+          </a>
+        </div>
+
+        <div class="flex font-normal space-x-[24px] items-center">
+          <div
+            class="flex items-center gap-[6px] cursor-pointer hover:text-white"
+          >
+            <span>USD</span>
+            <img
+              src="./assets/chevronDown.png"
+              alt=""
+              class="w-[12px] h-[12px]"
+            />
+          </div>
+          <div
+            class="flex items-center gap-[6px] cursor-pointer hover:text-white"
+          >
+            <span>English</span>
+            <img
+              src="./assets/chevronDown.png"
+              alt=""
+              class="w-[12px] h-[12px]"
+            />
+          </div>
+        </div>
+      </nav>
+
+      <div
+        class="flex justify-between px-[32px] py-[24px] bg-white border border-b- border-gray-100"
+      >
+        <div class="flex items-center">
+          <div class="flex items-center space-x-[8px] whitespace-nowrap">
+            <img src="./assets/GraduationCap.svg" alt="logo" />
+            <a href="#" class="text-3xl font-semibold text-gray-900">E-tutor</a>
+          </div>
+          <div
+            class="flex items-center ml-[50px] border border-gray-100 px-[16px] py-[12px] w-[200px] h-[48px] bg-white"
+          >
+            <select
+              class="appearance-none bg-transparent text-base font-normal text-gray-700 outline-none cursor-pointer pr-[12px] h-full"
+            >
+              <option value="" selected>Browse</option>
+              <option value="1">Development</option>
+              <option value="2">Business</option>
+            </select>
+            <img
+              src="./assets/dropdow-icon.png"
+              alt="dropdow-icon"
+              class="cursor-pointer pl-[45px]"
+            />
+          </div>
+
+          <div
+            class="flex items-center px-[16px] w-[400px] h-full border border-gray-100 ml-[16px]"
+          >
+            <img
+              src="./assets/MagnifyingGlass.png"
+              alt="search"
+              class="w-[25px] h-[25px] shrink-0"
+            />
+            <input
+              type="text"
+              placeholder="What do you want learn..."
+              class="flex-1 px-[12px] outline-none bg-transparent text-base font-normal text-gray-900 placeholder-gray-400 h-full"
+            />
+          </div>
+        </div>
+
+        <div class="flex space-x-[24px] items-center">
+          <div>
+            <img
+              src="./assets/Bell.svg"
+              alt="bell-icon"
+              class="cursor-pointer"
+            />
+          </div>
+          <div>
+            <img
+              src="./assets/Heart.svg"
+              alt="heart-icon"
+              class="cursor-pointer"
+            />
+          </div>
+          <div class="relative flex">
+            <img
+              src="./assets/ShoppingCartSimple.svg"
+              alt="cart-icon"
+              class="cursor-pointer"
+              id="navCart"
+            />
+            <span
+              id="cartNoti"
+              class="absolute -top-2 -right-2 bg-primary-500 text-white text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center hidden"
+            >
+              0
+            </span>
+          </div>
+
+          <div class="flex gap-[8px]">
+            <button class="btn btn-secondary text-primary-500">
+              Create Account
+            </button>
+            <button class="btn btn-primary">Sign in</button>
+          </div>
+        </div>
+      </div>
+    </header>
 
     <!----course Cards:----->
 
@@ -406,6 +549,7 @@
           <div class="w-full flex-col p-5 space-y-5">
             <button
               class="btn btn-primary w-full flex justify-center items-center"
+              id="addToCartbtn"
             >
               <img src="" />
               Add To Cart
